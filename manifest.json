@@ -8,19 +8,40 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "//aliyun.pasi.cat/icon-144x144.png",
+            "src": "//aliyun.pasi.cat/icon-144x144-any.png",
             "sizes": "144x144",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "//aliyun.pasi.cat/icon-192x192.png",
+            "src": "//aliyun.pasi.cat/icon-192x192-any.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "//aliyun.pasi.cat/icon-512x512.png",
+            "src": "//aliyun.pasi.cat/icon-512x512-any.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "//aliyun.pasi.cat/icon-144x144-maskable.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "//aliyun.pasi.cat/icon-192x192-maskable.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "//aliyun.pasi.cat/icon-512x512-maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }
