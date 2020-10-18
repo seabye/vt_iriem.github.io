@@ -1,11 +1,12 @@
 {
     "name": "每日电视",
     "short_name": "每日电视",
-    "start_url": "/",
-    "_theme_color": "#000000",
+    "description": "MeiRi.TV",
+    "start_url": ".",
     "background_color": "#000000",
-    "orientation": "natural",
+    "_theme_color": "#000000",
     "display": "standalone",
+    "orientation": "natural",
     "icons": [
         {
             "src": "//aliyun.pasi.cat/base/icon-144x144-any.png",
