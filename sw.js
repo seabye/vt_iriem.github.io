@@ -4,7 +4,7 @@
     // ##variable
     // ##module
     // ##build
-        // initial
+        // guim
             // service worker
             self.addEventListener('fetch',()=>{});
 // #content
