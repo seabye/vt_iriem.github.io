@@ -4,7 +4,7 @@
     // ##variable
     // ##module
     // ##build
-        // initial_option
+        // initial
             // service worker
             self.addEventListener('fetch',()=>{});
 // #content
