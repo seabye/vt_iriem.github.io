@@ -1,7 +1,7 @@
 {
     "name": "每日电视",
     "short_name": "每日电视",
-    "description": "MeiRi.TV",
+    "description": "电视机",
     "start_url": "/?pwa",
     "theme_color": "#000000",
     "background_color": "#000000",
