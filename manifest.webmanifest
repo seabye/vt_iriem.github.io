@@ -9,37 +9,37 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "//aliyun.pasi.cat/base/icon-144x144-any.png",
+            "src": "//handan.pasi.cat:9443/base/icon-144x144-any.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "//aliyun.pasi.cat/base/icon-192x192-any.png",
+            "src": "//handan.pasi.cat:9443/base/icon-192x192-any.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "//aliyun.pasi.cat/base/icon-512x512-any.png",
+            "src": "//handan.pasi.cat:9443/base/icon-512x512-any.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "//aliyun.pasi.cat/base/icon-144x144-maskable.png",
+            "src": "//handan.pasi.cat:9443/base/icon-144x144-maskable.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "//aliyun.pasi.cat/base/icon-192x192-maskable.png",
+            "src": "//handan.pasi.cat:9443/base/icon-192x192-maskable.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "//aliyun.pasi.cat/base/icon-512x512-maskable.png",
+            "src": "//handan.pasi.cat:9443/base/icon-512x512-maskable.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
