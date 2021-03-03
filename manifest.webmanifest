@@ -3,8 +3,8 @@
     "short_name": "每日电视",
     "description": "电视机",
     "start_url": "/?pwa",
-    "theme_color": "#000000",
-    "background_color": "#000000",
+    "theme_color": "#121212",
+    "background_color": "#121212",
     "orientation": "natural",
     "display": "standalone",
     "icons": [
