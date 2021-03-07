@@ -10,6 +10,7 @@
     window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
         return data.text();
     }).then(async(data)=>{
+        window.document.body.setAttribute('style','font-family: system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei;');
         window.document.body.innerHTML='Loading...';
         function*generator(list){
             for(let key=0,length=list.length;key<length;key++){
@@ -25,6 +26,7 @@
         for await(const value of generator(data.split('\n'))){
             window.before_list_result[value[1]]=value[0];
         }
+        window.document.body.removeAttribute('style');
         window.document.body.innerHTML='';
         for(const key in window.before_list_result){
             const element=window.document.createElement('script');
