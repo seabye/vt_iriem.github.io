@@ -10,6 +10,7 @@
     window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
         return data.text();
     }).then(async(data)=>{
+        window.document.body.innerHTML='Loading...';
         function*generator(list){
             for(let key=0,length=list.length;key<length;key++){
                 const start=window.Date.now();
@@ -24,6 +25,7 @@
         for await(const value of generator(data.split('\n'))){
             result[value[1]]=value[0];
         }
+        window.document.body.innerHTML='';
         for(const key in result){
             const element=window.document.createElement('script');
             element.setAttribute('src','https://seabye.com/link/gui_initial.js');
