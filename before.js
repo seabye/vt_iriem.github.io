@@ -41,7 +41,7 @@
                 'head_script': '//${window.before_list_result[key]}/client.js',
                 'head_icon': '//${window.before_list_result[key]}/base/icon.png',
                 'head_icon_apple': '//${window.before_list_result[key]}/base/icon-apple.png',
-                'head_theme_color_light': '#F7F7F7',
+                'head_theme_color_light': '#F6F6F6',
                 'head_theme_color_dark': '#1E1E1E',
                 'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
             }`);
