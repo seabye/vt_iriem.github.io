@@ -21,12 +21,12 @@
                 });
             }
         }
-        const result={};
+        window.before_list_result={};
         for await(const value of generator(data.split('\n'))){
-            result[value[1]]=value[0];
+            window.before_list_result[value[1]]=value[0];
         }
         window.document.body.innerHTML='';
-        for(const key in result){
+        for(const key in window.before_list_result){
             const element=window.document.createElement('script');
             element.setAttribute('src','https://seabye.com/link/gui_initial.js');
             element.setAttribute('type','application/javascript');
@@ -35,13 +35,13 @@
                 'start_background_color_dark': '#121212',
                 'service_worker': '/sw.js',
                 'head_title': '每日电视',
-                'head_style': '//${result[key]}/client.css',
-                'head_script': '//${result[key]}/client.js',
-                'head_icon': '//${result[key]}/base/icon.png',
-                'head_icon_apple': '//${result[key]}/base/icon-apple.png',
+                'head_style': '//${window.before_list_result[key]}/client.css',
+                'head_script': '//${window.before_list_result[key]}/client.js',
+                'head_icon': '//${window.before_list_result[key]}/base/icon.png',
+                'head_icon_apple': '//${window.before_list_result[key]}/base/icon-apple.png',
                 'head_theme_color_light': '#F7F7F7',
                 'head_theme_color_dark': '#1E1E1E',
-                'head_manifest': '/${result[key]}.manifest.webmanifest'
+                'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
             }`);
             window.document.head.insertAdjacentElement('beforeend',element);
             const loop=()=>{
