@@ -37,7 +37,7 @@
                 window.document.body.style.setProperty('padding','20px');
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
-                window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
+                window.document.body.style.setProperty('font-family','Consolas, Microsoft YaHei, monospace, Menlo, Monaco, Courier New, system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-weight','normal');
                 window.document.body.style.setProperty('font-size','14px');
@@ -85,7 +85,7 @@
                         window.before_list_result[value[1]]=value[0];
                     }
                 }
-                window.document.body.innerHTML+=': P';
+                window.document.body.innerHTML+=':P';
                 window.setTimeout(()=>{
                     if(window.JSON.stringify(window.before_list_result)!=='{}'){
                         for(const key in window.before_list_result){
@@ -129,7 +129,7 @@
                             break;
                         }
                     }else{
-                        window.document.body.innerHTML+=': (';
+                        window.document.body.innerHTML+=':(';
                     }
                 },1000);
             });
