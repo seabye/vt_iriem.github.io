@@ -111,7 +111,7 @@
                             window.document.head.insertAdjacentElement('beforeend',element);
                             window.removeEventListener('touchstart',preventDefault,{passive:false});
                             const loop=()=>{
-                                if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--ic_ve_color_white')){
+                                if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--sc_ve_before_ready')){
                                     window.setTimeout(()=>{
                                         window.document.documentElement.removeAttribute('style');
                                         if(!window.document.documentElement.style[0]){
@@ -121,7 +121,7 @@
                                         if(!window.document.body.style[0]){
                                             window.document.body.removeAttribute('style');
                                         }
-                                    },350*2);
+                                    },350*1.25);
                                     return true;
                                 }
                                 window.setTimeout(loop,1000/24);
