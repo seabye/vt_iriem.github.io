@@ -62,7 +62,7 @@
                     window.before_list_result[value[1]]=value[0];
                 }
             }
-            if(window.before_list_result!=={}){
+            if(window.JSON.stringify(window.before_list_result)!=='{}'){
                 for(const key in window.before_list_result){
                     window.document.head.innerHTML='';
                     window.document.body.innerHTML='';
