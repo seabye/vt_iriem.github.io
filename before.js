@@ -12,6 +12,8 @@
             event.preventDefault();
         };
         window.addEventListener('touchstart',preventDefault,{passive:false});
+        window.document.documentElement.style.setProperty('-webkit-user-select','none');
+        window.document.documentElement.style.setProperty('user-select','none');
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('position','fixed');
         window.document.documentElement.style.setProperty('width','100%');
@@ -53,7 +55,7 @@
                         const controller=new window.AbortController();
                         window.setTimeout(()=>{
                             return controller.abort();
-                        },3000);
+                        },2000);
                         yield window.fetch(`${window.location.protocol}//${list[key]}`,{
                             method:'HEAD',
                             signal:controller.signal
@@ -103,6 +105,8 @@
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
                             window.setTimeout(()=>{
+                                window.document.documentElement.style.removeProperty('-webkit-user-select');
+                                window.document.documentElement.style.removeProperty('user-select');
                                 window.document.documentElement.style.removeProperty('background-color');
                                 window.document.documentElement.style.removeProperty('position');
                                 window.document.documentElement.style.removeProperty('width');
@@ -122,7 +126,7 @@
                                 if(!window.document.body.style[0]){
                                     window.document.body.removeAttribute('style');
                                 }
-                            },5000);
+                            },1500);
                             break;
                         }
                     }else{
