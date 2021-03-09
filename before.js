@@ -39,6 +39,7 @@
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
+                window.document.body.innerHTML+='🤔\n';
                 return true;
             }
             window.setTimeout(loop,1000/24);
@@ -46,7 +47,6 @@
         loop();
         window.setTimeout(()=>{
             window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
-                window.document.body.innerHTML+='🤔\n';
                 return data.text();
             }).then(async(data)=>{
                 function*generator(list){
@@ -56,7 +56,7 @@
                         const controller=new window.AbortController();
                         window.setTimeout(()=>{
                             return controller.abort();
-                        },2000);
+                        },3000);
                         yield window.fetch(`${window.location.protocol}//${list[key]}`,{
                             method:'HEAD',
                             signal:controller.signal
