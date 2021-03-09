@@ -8,6 +8,10 @@
 // #build
     // build
     {
+        window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
+        window.document.documentElement.style.setProperty('position','absolute');
+        window.document.documentElement.style.setProperty('width','100%');
+        window.document.documentElement.style.setProperty('height','100%');
         window.document.head.insertAdjacentHTML('beforeend',`<meta name="viewport" content="width=device-width,user-scalable=no,viewport-fit=cover">`);
         window.document.head.insertAdjacentHTML('beforeend',`<title>每日电视</title>`);
         window.document.head.insertAdjacentHTML('beforeend',`<link rel="icon" type="image/png" href="/base/icon.png">`);
@@ -69,6 +73,10 @@
                 }`);
                 window.document.head.insertAdjacentElement('beforeend',element);
                 window.setTimeout(()=>{
+                    window.document.documentElement.style.removeProperty('background-color');
+                    window.document.documentElement.style.removeProperty('position');
+                    window.document.documentElement.style.removeProperty('width');
+                    window.document.documentElement.style.removeProperty('height');
                     window.document.body.style.removeProperty('background-color');
                     window.document.body.style.removeProperty('color');
                     window.document.body.style.removeProperty('display');
