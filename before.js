@@ -105,7 +105,7 @@
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
                             const loop=()=>{
-                                if(window.document.body.children[0]&&window.document.body.children[0].classList&&window.document.body.children[0].classList.contains('sc_cr')){
+                                if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--ic_ve_color_white')){
                                     window.removeEventListener('touchstart',preventDefault,{passive:false});
                                     // window.document.documentElement.style.removeProperty('background-color');
                                     window.document.documentElement.style.removeProperty('position');
