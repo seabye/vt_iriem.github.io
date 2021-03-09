@@ -105,29 +105,34 @@
                                 'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
-                            window.setTimeout(()=>{
-                                window.document.documentElement.style.removeProperty('position');
-                                window.document.documentElement.style.removeProperty('width');
-                                window.document.documentElement.style.removeProperty('height');
-                                window.document.body.style.removeProperty('-webkit-user-select');
-                                window.document.body.style.removeProperty('user-select');
-                                window.document.body.style.removeProperty('cursor');
-                                window.document.body.style.removeProperty('background-color');
-                                window.document.body.style.removeProperty('color');
-                                window.document.body.style.removeProperty('display');
-                                window.document.body.style.removeProperty('justify-content');
-                                window.document.body.style.removeProperty('align-items');
-                                window.document.body.style.removeProperty('position');
-                                window.document.body.style.removeProperty('margin');
-                                window.document.body.style.removeProperty('width');
-                                window.document.body.style.removeProperty('height');
-                                window.document.body.style.removeProperty('line-height');
-                                window.document.body.style.removeProperty('white-space');
-                                window.document.body.style.removeProperty('font-family');
-                                if(!window.document.body.style[0]){
-                                    window.document.body.removeAttribute('style');
+                            const loop=()=>{
+                                if(window.document.body.children[0].classList.value.contains('sc_cr')){
+                                    window.document.documentElement.style.removeProperty('position');
+                                    window.document.documentElement.style.removeProperty('width');
+                                    window.document.documentElement.style.removeProperty('height');
+                                    window.document.body.style.removeProperty('-webkit-user-select');
+                                    window.document.body.style.removeProperty('user-select');
+                                    window.document.body.style.removeProperty('cursor');
+                                    window.document.body.style.removeProperty('background-color');
+                                    window.document.body.style.removeProperty('color');
+                                    window.document.body.style.removeProperty('display');
+                                    window.document.body.style.removeProperty('justify-content');
+                                    window.document.body.style.removeProperty('align-items');
+                                    window.document.body.style.removeProperty('position');
+                                    window.document.body.style.removeProperty('margin');
+                                    window.document.body.style.removeProperty('width');
+                                    window.document.body.style.removeProperty('height');
+                                    window.document.body.style.removeProperty('line-height');
+                                    window.document.body.style.removeProperty('white-space');
+                                    window.document.body.style.removeProperty('font-family');
+                                    if(!window.document.body.style[0]){
+                                        window.document.body.removeAttribute('style');
+                                    }
+                                    return true;
                                 }
-                            },1500);
+                                window.setTimeout(loop,1000/24);
+                            };
+                            loop();
                             break;
                         }
                     }else{
