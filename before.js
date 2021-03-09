@@ -24,6 +24,22 @@
         if(!window.navigator.userAgent.match(/iPhone|iPad/i)&&!((window.navigator.userAgent.match(/Safari/i)&&!window.navigator.userAgent.match(/Chrome|Edg/i))||window.navigator.userAgent.match(/FxiOS|CriOS|EdgiOS/i))){
             window.document.head.insertAdjacentHTML('beforeend',`<meta name="theme-color" content="${window.matchMedia('(prefers-color-scheme:dark)').matches?'#1E1E1E':'#F6F6F6'}">`);
         }
+        if(window.document.documentElement.classList.value.match(/ic_nr_system_ios|ic_nr_browser_safari/i)){
+            window.setTimeout(()=>{
+                window.document.body.style.setProperty('margin','1px');
+                window.setTimeout(()=>{
+                    window.document.body.style.removeProperty('margin');
+                    window.setTimeout(()=>{
+                        if(!window.document.body.style[0]){
+                            window.document.body.removeAttribute('style');
+                        }
+                    },350);
+                    window.scroll({behavior:'smooth',top:0,left:0});
+                    window.document.documentElement.scrollIntoView({behavior:'smooth',block:'start',inline:'start'});
+                    window.document.body.scrollIntoView({behavior:'smooth',block:'start',inline:'start'});
+                },350/2);
+            },350/2);
+        }
         const loop=()=>{
             if(window.document.body){
                 window.document.body.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
