@@ -128,7 +128,7 @@
                     }else{
                         window.document.body.innerHTML+='👋';
                     }
-                },1000*1000);
+                },1000);
             });
         },500);
     }
