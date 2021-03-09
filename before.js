@@ -29,18 +29,19 @@
                 window.document.body.style.setProperty('width','100%');
                 window.document.body.style.setProperty('height','100%');
                 // ~~~~
+                window.document.body.style.setProperty('box-sizing','border-box');
                 window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 window.document.body.style.setProperty('display','flex');
-                window.document.body.style.setProperty('justify-content','center');
-                window.document.body.style.setProperty('align-items','center');
+                window.document.body.style.setProperty('justify-content','flex-start');
+                window.document.body.style.setProperty('align-items','flex-end');
                 window.document.body.style.setProperty('margin','unset');
+                window.document.body.style.setProperty('padding','20px');
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
                 window.document.body.style.setProperty('-webkit-user-select','none');
                 window.document.body.style.setProperty('user-select','none');
                 window.document.body.style.setProperty('cursor','default');
-                window.document.body.innerHTML+='🤔\n';
                 return true;
             }
             window.setTimeout(loop,1000/24);
@@ -52,7 +53,7 @@
             }).then(async(data)=>{
                 function*generator(list){
                     for(let key=0,length=list.length;key<length;key++){
-                        window.document.body.innerHTML+=`⚡️ ${list[key]}`;
+                        window.document.body.innerHTML+=`... ${list[key]}<br>`;
                         const start=window.Date.now();
                         const controller=new window.AbortController();
                         window.setTimeout(()=>{
@@ -64,14 +65,14 @@
                         }).then((data)=>{
                             const now=window.Date.now();
                             if(data.status===200){
-                                window.document.body.innerHTML+=` 🟢\n`;
+                                window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\.\.\.)(.*\<br\>)$/g,'Yes$2');
                                 return [list[key],now-start];
                             }
                             return data;
                         }).then((data)=>{
                             return data;
                         }).catch(()=>{
-                            window.document.body.innerHTML+=' 🔴\n';
+                            window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\.\.\.)(.*\<br\>)$/g,'No$2');
                             return false;
                         });
                     }
@@ -82,7 +83,6 @@
                         window.before_list_result[value[1]]=value[0];
                     }
                 }
-                window.document.body.innerHTML+='👌';
                 window.setTimeout(()=>{
                     if(window.JSON.stringify(window.before_list_result)!=='{}'){
                         for(const key in window.before_list_result){
@@ -128,7 +128,7 @@
                     }else{
                         window.document.body.innerHTML+='👋';
                     }
-                },1000);
+                },1000*1000);
             });
         },500);
     }
