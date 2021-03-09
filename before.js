@@ -9,7 +9,7 @@
     // build
     {
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
-        window.document.documentElement.style.setProperty('position','absolute');
+        window.document.documentElement.style.setProperty('position','fixed');
         window.document.documentElement.style.setProperty('width','100%');
         window.document.documentElement.style.setProperty('height','100%');
         window.document.head.insertAdjacentHTML('beforeend',`<meta name="viewport" content="width=device-width,user-scalable=no,viewport-fit=cover">`);
@@ -25,9 +25,11 @@
                 window.document.body.style.setProperty('display','flex');
                 window.document.body.style.setProperty('justify-content','center');
                 window.document.body.style.setProperty('align-items','center');
-                window.document.body.style.setProperty('position','absolute');
+                window.document.body.style.setProperty('position','fixed');
+                window.document.body.style.setProperty('margin','unset');
                 window.document.body.style.setProperty('width','100%');
                 window.document.body.style.setProperty('height','100%');
+                window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 return true;
             }
@@ -35,7 +37,7 @@
         };
         loop();
         window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
-            window.document.body.innerHTML+='🤔 ...<br>';
+            window.document.body.innerHTML+='🤔<br>';
             return data.text();
         }).then(async(data)=>{
             function*generator(list){
@@ -94,8 +96,10 @@
                         window.document.body.style.removeProperty('justify-content');
                         window.document.body.style.removeProperty('align-items');
                         window.document.body.style.removeProperty('position');
+                        window.document.body.style.removeProperty('margin');
                         window.document.body.style.removeProperty('width');
                         window.document.body.style.removeProperty('height');
+                        window.document.body.style.removeProperty('line-height');
                         window.document.body.style.removeProperty('font-family');
                         if(!window.document.body.style[0]){
                             window.document.body.removeAttribute('style');
