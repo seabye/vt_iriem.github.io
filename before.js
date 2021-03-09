@@ -130,7 +130,7 @@
                             break;
                         }
                     }else{
-                        window.document.body.innerHTML+=':(';
+                        window.document.body.innerHTML+='Server Error :(';
                     }
                 },1000);
             });
