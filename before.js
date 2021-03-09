@@ -12,8 +12,6 @@
             event.preventDefault();
         };
         window.addEventListener('touchstart',preventDefault,{passive:false});
-        window.document.documentElement.style.setProperty('-webkit-user-select','none');
-        window.document.documentElement.style.setProperty('user-select','none');
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('position','fixed');
         window.document.documentElement.style.setProperty('width','100%');
@@ -26,6 +24,9 @@
         }
         const loop=()=>{
             if(window.document.body){
+                window.document.body.style.setProperty('-webkit-user-select','none');
+                window.document.body.style.setProperty('user-select','none');
+                window.document.body.style.setProperty('cursor','default');
                 window.document.body.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
                 window.document.body.style.setProperty('display','flex');
@@ -105,12 +106,12 @@
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
                             window.setTimeout(()=>{
-                                window.document.documentElement.style.removeProperty('-webkit-user-select');
-                                window.document.documentElement.style.removeProperty('user-select');
-                                window.document.documentElement.style.removeProperty('background-color');
                                 window.document.documentElement.style.removeProperty('position');
                                 window.document.documentElement.style.removeProperty('width');
                                 window.document.documentElement.style.removeProperty('height');
+                                window.document.body.style.removeProperty('-webkit-user-select');
+                                window.document.body.style.removeProperty('user-select');
+                                window.document.body.style.removeProperty('cursor');
                                 window.document.body.style.removeProperty('background-color');
                                 window.document.body.style.removeProperty('color');
                                 window.document.body.style.removeProperty('display');
