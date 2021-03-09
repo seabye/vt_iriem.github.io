@@ -13,7 +13,7 @@
         };
         window.addEventListener('touchstart',preventDefault,{passive:false});
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
-        window.document.documentElement.style.setProperty('position','fixed');
+        window.document.documentElement.style.setProperty('position','relative');
         window.document.documentElement.style.setProperty('width','100%');
         window.document.documentElement.style.setProperty('height','100%');
         window.document.head.insertAdjacentHTML('beforeend',`<meta name="viewport" content="width=device-width,user-scalable=no,viewport-fit=cover">`);
@@ -24,21 +24,22 @@
         }
         const loop=()=>{
             if(window.document.body){
-                window.document.body.style.setProperty('-webkit-user-select','none');
-                window.document.body.style.setProperty('user-select','none');
-                window.document.body.style.setProperty('cursor','default');
                 window.document.body.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
-                window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
+                window.document.body.style.setProperty('position','relative');
+                window.document.body.style.setProperty('width','100%');
+                window.document.body.style.setProperty('height','100%');
+                // ~~~~
+                window.document.body.style.setProperty('white-space','pre-line');
+                window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 window.document.body.style.setProperty('display','flex');
                 window.document.body.style.setProperty('justify-content','center');
                 window.document.body.style.setProperty('align-items','center');
-                window.document.body.style.setProperty('position','fixed');
                 window.document.body.style.setProperty('margin','unset');
-                window.document.body.style.setProperty('width','100%');
-                window.document.body.style.setProperty('height','100%');
                 window.document.body.style.setProperty('line-height','161.8%');
-                window.document.body.style.setProperty('white-space','pre-line');
-                window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
+                window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
+                window.document.body.style.setProperty('-webkit-user-select','none');
+                window.document.body.style.setProperty('user-select','none');
+                window.document.body.style.setProperty('cursor','default');
                 window.document.body.innerHTML+='🤔\n';
                 return true;
             }
@@ -51,7 +52,7 @@
             }).then(async(data)=>{
                 function*generator(list){
                     for(let key=0,length=list.length;key<length;key++){
-                        window.document.body.innerHTML+=`🔌 ${list[key]}`;
+                        window.document.body.innerHTML+=`⚡️ ${list[key]}`;
                         const start=window.Date.now();
                         const controller=new window.AbortController();
                         window.setTimeout(()=>{
@@ -85,8 +86,8 @@
                 window.setTimeout(()=>{
                     if(window.JSON.stringify(window.before_list_result)!=='{}'){
                         for(const key in window.before_list_result){
-                            window.document.head.innerHTML='';
                             window.document.body.innerHTML='';
+                            window.document.head.innerHTML='';
                             const element=window.document.createElement('script');
                             element.setAttribute('src','https://seabye.com/link/gui_initial.js');
                             element.setAttribute('type','application/javascript');
@@ -104,34 +105,19 @@
                                 'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
+                            window.removeEventListener('touchstart',preventDefault,{passive:false});
                             const loop=()=>{
                                 if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--ic_ve_color_white')){
-                                    window.removeEventListener('touchstart',preventDefault,{passive:false});
-                                    window.document.documentElement.style.removeProperty('background-color');
-                                    window.document.documentElement.style.removeProperty('position');
-                                    window.document.documentElement.style.removeProperty('width');
-                                    window.document.documentElement.style.removeProperty('height');
-                                    if(!window.document.documentElement.style[0]){
+                                    window.setTimeout(()=>{
                                         window.document.documentElement.removeAttribute('style');
-                                    }
-                                    window.document.body.style.removeProperty('-webkit-user-select');
-                                    window.document.body.style.removeProperty('user-select');
-                                    window.document.body.style.removeProperty('cursor');
-                                    window.document.body.style.removeProperty('background-color');
-                                    window.document.body.style.removeProperty('color');
-                                    window.document.body.style.removeProperty('display');
-                                    window.document.body.style.removeProperty('justify-content');
-                                    window.document.body.style.removeProperty('align-items');
-                                    window.document.body.style.removeProperty('position');
-                                    window.document.body.style.removeProperty('margin');
-                                    window.document.body.style.removeProperty('width');
-                                    window.document.body.style.removeProperty('height');
-                                    window.document.body.style.removeProperty('line-height');
-                                    window.document.body.style.removeProperty('white-space');
-                                    window.document.body.style.removeProperty('font-family');
-                                    if(!window.document.body.style[0]){
+                                        if(!window.document.documentElement.style[0]){
+                                            window.document.documentElement.removeAttribute('style');
+                                        }
                                         window.document.body.removeAttribute('style');
-                                    }
+                                        if(!window.document.body.style[0]){
+                                            window.document.body.removeAttribute('style');
+                                        }
+                                    },350*2);
                                     return true;
                                 }
                                 window.setTimeout(loop,1000/24);
