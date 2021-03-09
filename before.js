@@ -8,6 +8,10 @@
 // #build
     // build
     {
+        const preventDefault=(event)=>{
+            event.preventDefault();
+        };
+        window.addEventListener('touchstart',preventDefault,{passive:false});
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('position','fixed');
         window.document.documentElement.style.setProperty('width','100%');
@@ -29,7 +33,8 @@
                 window.document.body.style.setProperty('margin','unset');
                 window.document.body.style.setProperty('width','100%');
                 window.document.body.style.setProperty('height','100%');
-                window.document.body.style.setProperty('line-height','200%');
+                window.document.body.style.setProperty('line-height','161.8%');
+                window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 return true;
             }
@@ -37,12 +42,12 @@
         };
         loop();
         window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
-            window.document.body.innerHTML+='🤔<br>';
+            window.document.body.innerHTML+='🤔\n';
             return data.text();
         }).then(async(data)=>{
             function*generator(list){
                 for(let key=0,length=list.length;key<length;key++){
-                    window.document.body.innerHTML+=`... ${list[key]}`;
+                    window.document.body.innerHTML+=`🔌 ${list[key]}`;
                     const start=window.Date.now();
                     const controller=new window.AbortController();
                     window.setTimeout(()=>{
@@ -54,14 +59,14 @@
                     }).then((data)=>{
                         const now=window.Date.now();
                         if(data.status===200){
-                            window.document.body.innerHTML+=` 🟢<br>`;
+                            window.document.body.innerHTML+=` 🟢\n`;
                             return [list[key],now-start];
                         }
                         return data;
                     }).then((data)=>{
                         return data;
                     }).catch(()=>{
-                        window.document.body.innerHTML+=' 🔴<br>';
+                        window.document.body.innerHTML+=' 🔴\n';
                         return false;
                     });
                 }
@@ -76,6 +81,7 @@
             window.setTimeout(()=>{
                 if(window.JSON.stringify(window.before_list_result)!=='{}'){
                     for(const key in window.before_list_result){
+                        window.removeEventListener('touchstart',preventDefault,{passive:false});
                         window.document.head.innerHTML='';
                         window.document.body.innerHTML='';
                         const element=window.document.createElement('script');
@@ -110,6 +116,7 @@
                             window.document.body.style.removeProperty('width');
                             window.document.body.style.removeProperty('height');
                             window.document.body.style.removeProperty('line-height');
+                            window.document.body.style.removeProperty('white-space');
                             window.document.body.style.removeProperty('font-family');
                             if(!window.document.body.style[0]){
                                 window.document.body.removeAttribute('style');
