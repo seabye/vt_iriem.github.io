@@ -107,7 +107,7 @@
                             const loop=()=>{
                                 if(window.document.body.children[0]&&window.document.body.children[0].classList&&window.document.body.children[0].classList.contains('sc_cr')){
                                     window.removeEventListener('touchstart',preventDefault,{passive:false});
-                                    window.document.documentElement.style.removeProperty('background-color');
+                                    // window.document.documentElement.style.removeProperty('background-color');
                                     window.document.documentElement.style.removeProperty('position');
                                     window.document.documentElement.style.removeProperty('width');
                                     window.document.documentElement.style.removeProperty('height');
