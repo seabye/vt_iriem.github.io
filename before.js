@@ -30,8 +30,6 @@
                 window.document.body.style.setProperty('height','100%');
                 // ~~~~
                 window.document.body.style.setProperty('box-sizing','border-box');
-                window.document.body.style.setProperty('white-space','pre-line');
-                window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 window.document.body.style.setProperty('display','flex');
                 window.document.body.style.setProperty('justify-content','flex-start');
                 window.document.body.style.setProperty('align-items','flex-end');
@@ -39,6 +37,10 @@
                 window.document.body.style.setProperty('padding','20px');
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
+                window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
+                window.document.body.style.setProperty('white-space','pre-line');
+                window.document.body.style.setProperty('font-weight','normal');
+                window.document.body.style.setProperty('font-size','14px');
                 window.document.body.style.setProperty('-webkit-user-select','none');
                 window.document.body.style.setProperty('user-select','none');
                 window.document.body.style.setProperty('cursor','default');
