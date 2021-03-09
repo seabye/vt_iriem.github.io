@@ -29,7 +29,7 @@
                 window.document.body.style.setProperty('margin','unset');
                 window.document.body.style.setProperty('width','100%');
                 window.document.body.style.setProperty('height','100%');
-                window.document.body.style.setProperty('line-height','161.8%');
+                window.document.body.style.setProperty('line-height','200%');
                 window.document.body.style.setProperty('font-family','system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
                 return true;
             }
@@ -44,7 +44,14 @@
                 for(let key=0,length=list.length;key<length;key++){
                     window.document.body.innerHTML+=`... ${list[key]}`;
                     const start=window.Date.now();
-                    yield window.fetch(`${window.location.protocol}//${list[key]}`,{method:'HEAD'}).then((data)=>{
+                    const controller=new window.AbortController();
+                    window.setTimeout(()=>{
+                        return controller.abort();
+                    },3000);
+                    yield window.fetch(`${window.location.protocol}//${list[key]}`,{
+                        method:'HEAD',
+                        signal:controller.signal
+                    }).then((data)=>{
                         const now=window.Date.now();
                         if(data.status===200){
                             window.document.body.innerHTML+=` 🟢<br>`;
@@ -65,52 +72,55 @@
                     window.before_list_result[value[1]]=value[0];
                 }
             }
-            if(window.JSON.stringify(window.before_list_result)!=='{}'){
-                for(const key in window.before_list_result){
-                    window.document.head.innerHTML='';
-                    window.document.body.innerHTML='';
-                    const element=window.document.createElement('script');
-                    element.setAttribute('src','https://seabye.com/link/gui_initial.js');
-                    element.setAttribute('type','application/javascript');
-                    element.setAttribute('data-gui_initial',`{
-                        'start_background_color_light': '#FFFFFF',
-                        'start_background_color_dark': '#121212',
-                        'service_worker': '/sw.js',
-                        'head_title': '每日电视',
-                        'head_style': '//${window.before_list_result[key]}/client.css',
-                        'head_script': '//${window.before_list_result[key]}/client.js',
-                        'head_icon': '//${window.before_list_result[key]}/base/icon.png',
-                        'head_icon_apple': '//${window.before_list_result[key]}/base/icon-apple.png',
-                        'head_theme_color_light': '#F6F6F6',
-                        'head_theme_color_dark': '#1E1E1E',
-                        'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
-                    }`);
-                    window.document.head.insertAdjacentElement('beforeend',element);
-                    window.setTimeout(()=>{
-                        window.document.documentElement.style.removeProperty('background-color');
-                        window.document.documentElement.style.removeProperty('position');
-                        window.document.documentElement.style.removeProperty('width');
-                        window.document.documentElement.style.removeProperty('height');
-                        window.document.body.style.removeProperty('background-color');
-                        window.document.body.style.removeProperty('color');
-                        window.document.body.style.removeProperty('display');
-                        window.document.body.style.removeProperty('justify-content');
-                        window.document.body.style.removeProperty('align-items');
-                        window.document.body.style.removeProperty('position');
-                        window.document.body.style.removeProperty('margin');
-                        window.document.body.style.removeProperty('width');
-                        window.document.body.style.removeProperty('height');
-                        window.document.body.style.removeProperty('line-height');
-                        window.document.body.style.removeProperty('font-family');
-                        if(!window.document.body.style[0]){
-                            window.document.body.removeAttribute('style');
-                        }
-                    },5000);
-                    break;
+            window.document.body.innerHTML+='👌';
+            window.setTimeout(()=>{
+                if(window.JSON.stringify(window.before_list_result)!=='{}'){
+                    for(const key in window.before_list_result){
+                        window.document.head.innerHTML='';
+                        window.document.body.innerHTML='';
+                        const element=window.document.createElement('script');
+                        element.setAttribute('src','https://seabye.com/link/gui_initial.js');
+                        element.setAttribute('type','application/javascript');
+                        element.setAttribute('data-gui_initial',`{
+                            'start_background_color_light': '#FFFFFF',
+                            'start_background_color_dark': '#121212',
+                            'service_worker': '/sw.js',
+                            'head_title': '每日电视',
+                            'head_style': '//${window.before_list_result[key]}/client.css',
+                            'head_script': '//${window.before_list_result[key]}/client.js',
+                            'head_icon': '//${window.before_list_result[key]}/base/icon.png',
+                            'head_icon_apple': '//${window.before_list_result[key]}/base/icon-apple.png',
+                            'head_theme_color_light': '#F6F6F6',
+                            'head_theme_color_dark': '#1E1E1E',
+                            'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
+                        }`);
+                        window.document.head.insertAdjacentElement('beforeend',element);
+                        window.setTimeout(()=>{
+                            window.document.documentElement.style.removeProperty('background-color');
+                            window.document.documentElement.style.removeProperty('position');
+                            window.document.documentElement.style.removeProperty('width');
+                            window.document.documentElement.style.removeProperty('height');
+                            window.document.body.style.removeProperty('background-color');
+                            window.document.body.style.removeProperty('color');
+                            window.document.body.style.removeProperty('display');
+                            window.document.body.style.removeProperty('justify-content');
+                            window.document.body.style.removeProperty('align-items');
+                            window.document.body.style.removeProperty('position');
+                            window.document.body.style.removeProperty('margin');
+                            window.document.body.style.removeProperty('width');
+                            window.document.body.style.removeProperty('height');
+                            window.document.body.style.removeProperty('line-height');
+                            window.document.body.style.removeProperty('font-family');
+                            if(!window.document.body.style[0]){
+                                window.document.body.removeAttribute('style');
+                            }
+                        },5000);
+                        break;
+                    }
+                }else{
+                    window.document.body.innerHTML+='👋';
                 }
-            }else{
-                window.document.body.innerHTML+='👋';
-            }
+            },1000);
         });
     }
 // #debug
