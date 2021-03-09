@@ -107,7 +107,7 @@
                             const loop=()=>{
                                 if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--ic_ve_color_white')){
                                     window.removeEventListener('touchstart',preventDefault,{passive:false});
-                                    // window.document.documentElement.style.removeProperty('background-color');
+                                    window.document.documentElement.style.removeProperty('background-color');
                                     window.document.documentElement.style.removeProperty('position');
                                     window.document.documentElement.style.removeProperty('width');
                                     window.document.documentElement.style.removeProperty('height');
