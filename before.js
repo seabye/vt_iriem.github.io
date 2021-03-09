@@ -86,7 +86,7 @@
                         window.before_list_result[value[1]]=value[0];
                     }
                 }
-                window.document.body.innerHTML+=':P';
+                window.document.body.innerHTML+='Go :P';
                 window.setTimeout(()=>{
                     if(window.JSON.stringify(window.before_list_result)!=='{}'){
                         for(const key in window.before_list_result){
