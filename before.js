@@ -44,6 +44,7 @@
                 window.document.body.style.setProperty('-webkit-user-select','none');
                 window.document.body.style.setProperty('user-select','none');
                 window.document.body.style.setProperty('cursor','default');
+                window.document.body.innerHTML+='Ready<br>';
                 return true;
             }
             window.setTimeout(loop,1000/24);
