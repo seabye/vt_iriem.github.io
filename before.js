@@ -86,9 +86,9 @@
                         window.before_list_result[value[1]]=value[0];
                     }
                 }
-                window.document.body.innerHTML+='Go :P';
-                window.setTimeout(()=>{
-                    if(window.JSON.stringify(window.before_list_result)!=='{}'){
+                if(window.JSON.stringify(window.before_list_result)!=='{}'){
+                    window.document.body.innerHTML+='Go :P';
+                    window.setTimeout(()=>{
                         for(const key in window.before_list_result){
                             window.document.body.innerHTML='';
                             window.document.head.innerHTML='';
@@ -129,10 +129,10 @@
                             loop();
                             break;
                         }
-                    }else{
-                        window.document.body.innerHTML+='Server Error :(';
-                    }
-                },1000);
+                    },1000);
+                }else{
+                    window.document.body.innerHTML+='Server Error :(';
+                }
             });
         },500);
     }
