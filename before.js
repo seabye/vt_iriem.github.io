@@ -85,7 +85,6 @@
                 window.setTimeout(()=>{
                     if(window.JSON.stringify(window.before_list_result)!=='{}'){
                         for(const key in window.before_list_result){
-                            window.removeEventListener('touchstart',preventDefault,{passive:false});
                             window.document.head.innerHTML='';
                             window.document.body.innerHTML='';
                             const element=window.document.createElement('script');
@@ -106,10 +105,15 @@
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
                             const loop=()=>{
-                                if(window.document.body.children[0].classList.value.contains('sc_cr')){
+                                if(window.document.body.children[0]&&window.document.body.children[0].classList&&window.document.body.children[0].classList.contains('sc_cr')){
+                                    window.removeEventListener('touchstart',preventDefault,{passive:false});
+                                    window.document.documentElement.style.removeProperty('background-color');
                                     window.document.documentElement.style.removeProperty('position');
                                     window.document.documentElement.style.removeProperty('width');
                                     window.document.documentElement.style.removeProperty('height');
+                                    if(!window.document.documentElement.style[0]){
+                                        window.document.documentElement.removeAttribute('style');
+                                    }
                                     window.document.body.style.removeProperty('-webkit-user-select');
                                     window.document.body.style.removeProperty('user-select');
                                     window.document.body.style.removeProperty('cursor');
