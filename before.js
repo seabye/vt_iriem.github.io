@@ -83,6 +83,7 @@
                         window.before_list_result[value[1]]=value[0];
                     }
                 }
+                window.document.body.innerHTML+=': P';
                 window.setTimeout(()=>{
                     if(window.JSON.stringify(window.before_list_result)!=='{}'){
                         for(const key in window.before_list_result){
@@ -126,7 +127,7 @@
                             break;
                         }
                     }else{
-                        window.document.body.innerHTML+='👋';
+                        window.document.body.innerHTML+=': (';
                     }
                 },1000);
             });
