@@ -13,7 +13,7 @@
         };
         window.addEventListener('touchstart',preventDefault,{passive:false});
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
-        window.document.documentElement.style.setProperty('position','fixed');
+        window.document.documentElement.style.setProperty('position','relative');
         window.document.documentElement.style.setProperty('left','0');
         window.document.documentElement.style.setProperty('top','0');
         window.document.documentElement.style.setProperty('width','100%');
@@ -27,7 +27,7 @@
         const loop=()=>{
             if(window.document.body){
                 window.document.body.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
-                window.document.body.style.setProperty('position','fixed');
+                window.document.body.style.setProperty('position','relative');
                 window.document.body.style.setProperty('left','0');
                 window.document.body.style.setProperty('top','0');
                 window.document.body.style.setProperty('width','100%');
