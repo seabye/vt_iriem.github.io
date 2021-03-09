@@ -47,9 +47,10 @@
                     yield window.fetch(`${window.location.protocol}//${list[key]}`,{method:'HEAD'}).then((data)=>{
                         const now=window.Date.now();
                         if(data.status===200){
-                            window.document.body.innerHTML+=`${list[key]} 🟢<br>`;
+                            window.document.body.innerHTML+=` 🟢<br>`;
                             return [list[key],now-start];
                         }
+                        return data;
                     }).then((data)=>{
                         return data;
                     }).catch(()=>{
