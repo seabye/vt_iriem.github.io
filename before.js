@@ -21,7 +21,7 @@
         window.document.documentElement.style.setProperty('background-position','center');
         window.document.documentElement.style.setProperty('background-repeat','no-repeat');
         window.document.documentElement.style.setProperty('background-size','38.4%');
-        window.document.documentElement.style.setProperty('position','fixed');
+        window.document.documentElement.style.setProperty('position','absolute');
         window.document.documentElement.style.setProperty('left','0');
         window.document.documentElement.style.setProperty('top','0');
         window.document.documentElement.style.setProperty('width','100%');
@@ -34,7 +34,7 @@
         }
         const loop=()=>{
             if(window.document.body){
-                window.document.body.style.setProperty('position','fixed');
+                window.document.body.style.setProperty('position','absolute');
                 window.document.body.style.setProperty('left','0');
                 window.document.body.style.setProperty('top','0');
                 window.document.body.style.setProperty('width','100%');
@@ -144,7 +144,7 @@
                             loop();
                             break;
                         }
-                    },1000);
+                    },1000*1000);
                 }else{
                     window.document.body.innerHTML+='Server Error :(';
                 }
