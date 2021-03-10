@@ -12,7 +12,7 @@
             event.preventDefault();
         };
         window.addEventListener('touchstart',preventDefault);
-        window.addEventListener('touchmove',preventDefault);
+        window.addEventListener('touchmove',preventDefault,{passive:false});
         window.addEventListener('touchend',preventDefault);
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('background-image','url(/base/background/naruto.png)');
