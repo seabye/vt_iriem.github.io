@@ -12,6 +12,8 @@
             event.preventDefault();
         };
         window.addEventListener('touchstart',preventDefault);
+        window.addEventListener('touchmove',preventDefault);
+        window.addEventListener('touchend',preventDefault);
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('background-image','url(/base/background/naruto.png)');
         window.document.documentElement.style.setProperty('background-position','center');
@@ -117,6 +119,8 @@
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
                             window.removeEventListener('touchstart',preventDefault);
+                            window.removeEventListener('touchmove',preventDefault);
+                            window.removeEventListener('touchend',preventDefault);
                             const loop=()=>{
                                 if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--sc_ve_before_ready')){
                                     window.setTimeout(()=>{
