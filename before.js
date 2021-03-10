@@ -11,7 +11,7 @@
         const preventDefault=(event)=>{
             event.preventDefault();
         };
-        window.addEventListener('touchstart',preventDefault,{passive:false});
+        window.addEventListener('touchstart',preventDefault);
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('position','relative');
         window.document.documentElement.style.setProperty('left','0');
@@ -113,7 +113,7 @@
                                 'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
-                            window.removeEventListener('touchstart',preventDefault,{passive:false});
+                            window.removeEventListener('touchstart',preventDefault);
                             const loop=()=>{
                                 if(window.getComputedStyle(window.document.documentElement).getPropertyValue('--sc_ve_before_ready')){
                                     window.setTimeout(()=>{
