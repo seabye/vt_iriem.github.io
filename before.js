@@ -21,6 +21,7 @@
         window.document.documentElement.style.setProperty('background-position','center');
         window.document.documentElement.style.setProperty('background-repeat','no-repeat');
         window.document.documentElement.style.setProperty('background-size','38.4%');
+        window.document.documentElement.style.setProperty('overflow','hidden');
         window.document.documentElement.style.setProperty('position','absolute');
         window.document.documentElement.style.setProperty('left','0');
         window.document.documentElement.style.setProperty('top','0');
@@ -34,6 +35,7 @@
         }
         const loop=()=>{
             if(window.document.body){
+                window.document.body.style.setProperty('overflow','hidden');
                 window.document.body.style.setProperty('position','absolute');
                 window.document.body.style.setProperty('left','0');
                 window.document.body.style.setProperty('top','0');
