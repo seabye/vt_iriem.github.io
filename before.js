@@ -17,7 +17,7 @@
         window.addEventListener('wheel',preventDefault,{passive:false});
         window.addEventListener('gesturestart',preventDefault);
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
-        window.document.documentElement.style.setProperty('background-image','url(/base/background/naruto.png)');
+        window.document.documentElement.style.setProperty('background-image','url(/base/background/naruto.jpg)');
         window.document.documentElement.style.setProperty('background-position','center');
         window.document.documentElement.style.setProperty('background-repeat','no-repeat');
         window.document.documentElement.style.setProperty('background-size','38.4%');
