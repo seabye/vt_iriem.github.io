@@ -16,11 +16,9 @@
         window.addEventListener('touchend',preventDefault);
         window.addEventListener('wheel',preventDefault,{passive:false});
         window.addEventListener('gesturestart',preventDefault);
-        window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
+        window.document.documentElement.style.setProperty('background','center/38.4% no-repeat');
         window.document.documentElement.style.setProperty('background-image','url(/base/background/naruto.jpg)');
-        window.document.documentElement.style.setProperty('background-position','center');
-        window.document.documentElement.style.setProperty('background-repeat','no-repeat');
-        window.document.documentElement.style.setProperty('background-size','38.4%');
+        window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`,'important');
         window.document.documentElement.style.setProperty('overflow','hidden');
         window.document.documentElement.style.setProperty('position','absolute');
         window.document.documentElement.style.setProperty('left','0');
@@ -50,7 +48,7 @@
                 window.document.body.style.setProperty('padding','20px');
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
-                window.document.body.style.setProperty('font-family','Consolas, Microsoft YaHei, monospace, Menlo, Monaco, Courier New, system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Noto Sans CJK SC, Microsoft YaHei');
+                window.document.body.style.setProperty('font-family','Consolas, Microsoft YaHei, monospace, Menlo, Monaco, Courier New');
                 window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-weight','normal');
                 window.document.body.style.setProperty('font-size','14px');
