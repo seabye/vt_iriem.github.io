@@ -144,7 +144,7 @@
                             loop();
                             break;
                         }
-                    },1000*1000);
+                    },1000);
                 }else{
                     window.document.body.innerHTML+='Server Error :(';
                 }
