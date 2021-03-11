@@ -18,7 +18,7 @@
         window.addEventListener('gesturestart',preventDefault);
         window.document.documentElement.style.setProperty('background','center/38.4% no-repeat');
         window.document.documentElement.style.setProperty('background-color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`);
-        window.document.documentElement.style.setProperty('background-image','url(/base/player/poster.png)');
+        window.document.documentElement.style.setProperty('background-image','url(/base/before/image.png)');
         window.document.documentElement.style.setProperty('overflow','hidden');
         window.document.documentElement.style.setProperty('position','absolute');
         window.document.documentElement.style.setProperty('left','0');
@@ -29,8 +29,10 @@
         window.document.head.insertAdjacentHTML('beforeend',`<title>每日电视</title>`);
         window.document.head.insertAdjacentHTML('beforeend',`<link rel="icon" type="image/png" href="/base/icon.png">`);
         if(!window.navigator.userAgent.match(/iPhone|iPad/i)&&!((window.navigator.userAgent.match(/Safari/i)&&!window.navigator.userAgent.match(/Chrome|Edg/i))||window.navigator.userAgent.match(/FxiOS|CriOS|EdgiOS/i))){
+            window.document.head.insertAdjacentHTML('beforeend',`<link rel="apple-touch-icon" href="/base/icon-apple.png">`);
             window.document.head.insertAdjacentHTML('beforeend',`<meta name="theme-color" content="${window.matchMedia('(prefers-color-scheme:dark)').matches?'#1E1E1E':'#F6F6F6'}">`);
         }
+        window.document.head.insertAdjacentHTML('beforeend',`<link rel="manifest" href="/manifest.webmanifest">`);
         const loop=()=>{
             if(window.document.body){
                 window.document.body.style.setProperty('overflow','hidden');
