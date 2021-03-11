@@ -117,7 +117,7 @@
                                 'head_icon_apple': '//${window.before_list_result[key]}/base/icon-apple.png',
                                 'head_theme_color_light': '#F6F6F6',
                                 'head_theme_color_dark': '#1E1E1E',
-                                'head_manifest': '/${window.before_list_result[key]}.manifest.webmanifest'
+                                'head_manifest': '/manifest.webmanifest'
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
                             window.removeEventListener('touchstart',preventDefault);

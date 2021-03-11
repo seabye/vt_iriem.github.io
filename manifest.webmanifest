@@ -9,37 +9,37 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "//hd2.pasi.cat:8208/base/icon-144x144-any.png",
+            "src": "base/icon-144x144-any.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "//hd2.pasi.cat:8208/base/icon-192x192-any.png",
+            "src": "base/icon-192x192-any.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "//hd2.pasi.cat:8208/base/icon-512x512-any.png",
+            "src": "base/icon-512x512-any.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "//hd2.pasi.cat:8208/base/icon-144x144-maskable.png",
+            "src": "base/icon-144x144-maskable.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "//hd2.pasi.cat:8208/base/icon-192x192-maskable.png",
+            "src": "base/icon-192x192-maskable.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "//hd2.pasi.cat:8208/base/icon-512x512-maskable.png",
+            "src": "base/icon-512x512-maskable.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
