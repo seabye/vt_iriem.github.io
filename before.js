@@ -28,8 +28,9 @@
         window.document.head.insertAdjacentHTML('beforeend',`<meta name="viewport" content="width=device-width,user-scalable=no,viewport-fit=cover">`);
         window.document.head.insertAdjacentHTML('beforeend',`<title>每日电视</title>`);
         window.document.head.insertAdjacentHTML('beforeend',`<link rel="icon" type="image/png" href="/base/icon.png">`);
-        if(!window.navigator.userAgent.match(/iPhone|iPad/i)&&!((window.navigator.userAgent.match(/Safari/i)&&!window.navigator.userAgent.match(/Chrome|Edg/i))||window.navigator.userAgent.match(/FxiOS|CriOS|EdgiOS/i))){
+        if(window.navigator.userAgent.match(/iPhone|iPad/i)||((window.navigator.userAgent.match(/Safari/i)&&!window.navigator.userAgent.match(/Chrome|Edg/i))||window.navigator.userAgent.match(/FxiOS|CriOS|EdgiOS/i))){
             window.document.head.insertAdjacentHTML('beforeend',`<link rel="apple-touch-icon" href="/base/icon-apple.png">`);
+        }else{
             window.document.head.insertAdjacentHTML('beforeend',`<meta name="theme-color" content="${window.matchMedia('(prefers-color-scheme:dark)').matches?'#1E1E1E':'#F6F6F6'}">`);
         }
         window.document.head.insertAdjacentHTML('beforeend',`<link rel="manifest" href="/manifest.webmanifest">`);
