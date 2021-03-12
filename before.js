@@ -143,7 +143,7 @@
                                         if(!window.document.body.style[0]){
                                             window.document.body.removeAttribute('style');
                                         }
-                                    },350*1.25);
+                                    },350*1.5);
                                     return true;
                                 }
                                 window.setTimeout(loop,1000/24);
