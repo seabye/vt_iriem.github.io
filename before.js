@@ -55,7 +55,7 @@
                 window.document.body.style.setProperty('padding','20px');
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
-                window.document.body.style.setProperty('font-family','Consolas, Microsoft YaHei, monospace, Menlo, Monaco, Courier New, sans-serif');
+                window.document.body.style.setProperty('font-family','"Menlo", "Monaco", "Courier New", monospace');
                 window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-weight','normal');
                 window.document.body.style.setProperty('font-size','14px');
