@@ -151,12 +151,12 @@
                             loop();
                             break;
                         }
-                    },1000);
+                    },350*2);
                 }else{
                     window.document.body.innerHTML+='Server Error :(';
                 }
             });
-        },500);
+        },350);
     }
 // #debug
 // #after
