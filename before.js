@@ -134,16 +134,14 @@
                             window.removeEventListener('gesturestart',preventDefault);
                             const loop=()=>{
                                 if(window.clientOk){
-                                    window.setTimeout(()=>{
+                                    window.document.documentElement.removeAttribute('style');
+                                    if(!window.document.documentElement.style[0]){
                                         window.document.documentElement.removeAttribute('style');
-                                        if(!window.document.documentElement.style[0]){
-                                            window.document.documentElement.removeAttribute('style');
-                                        }
+                                    }
+                                    window.document.body.removeAttribute('style');
+                                    if(!window.document.body.style[0]){
                                         window.document.body.removeAttribute('style');
-                                        if(!window.document.body.style[0]){
-                                            window.document.body.removeAttribute('style');
-                                        }
-                                    },350*1.5/2);
+                                    }
                                     return true;
                                 }
                                 window.setTimeout(loop,1000/24);
