@@ -133,7 +133,7 @@
                             window.removeEventListener('wheel',preventDefault);
                             window.removeEventListener('gesturestart',preventDefault);
                             const loop=()=>{
-                                if(window.clientOk){
+                                if(window.readyGo){
                                     window.document.documentElement.removeAttribute('style');
                                     if(!window.document.documentElement.style[0]){
                                         window.document.documentElement.removeAttribute('style');
