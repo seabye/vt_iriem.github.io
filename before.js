@@ -55,10 +55,10 @@
                 window.document.body.style.setProperty('padding','20px');
                 window.document.body.style.setProperty('line-height','161.8%');
                 window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
-                window.document.body.style.setProperty('font-family','"Menlo", "Monaco", "Courier New", monospace');
+                window.document.body.style.setProperty('font-family','"Menlo", "Monaco", "Consolas", "Courier New", "Ubuntu Mono", monospace');
                 window.document.body.style.setProperty('white-space','pre-line');
                 window.document.body.style.setProperty('font-weight','normal');
-                window.document.body.style.setProperty('font-size','14px');
+                window.document.body.style.setProperty('font-size','12px');
                 window.document.body.style.setProperty('-webkit-user-select','none');
                 window.document.body.style.setProperty('user-select','none');
                 window.document.body.style.setProperty('cursor','default');
