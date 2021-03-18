@@ -74,7 +74,7 @@
             }).then(async(data)=>{
                 function*generator(list){
                     for(let key=0,length=list.length;key<length;key++){
-                        window.document.body.innerHTML+=`... ${list[key]}<br>`;
+                        window.document.body.innerHTML+=`<span style="display: contents;">...</span> ${list[key]}<br>`;
                         const start=window.Date.now();
                         const controller=new window.AbortController();
                         window.setTimeout(()=>{
@@ -86,14 +86,14 @@
                         }).then((data)=>{
                             const now=window.Date.now();
                             if(data.status===200){
-                                window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\.\.\.)(.*\<br\>)$/g,'Yes$2');
+                                window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\<span style\=\"display\: contents\;\"\>\.\.\.\<\/span\>)(.*\<br\>)$/g,'<span style="display: contents; color: green;">Yes</span>$2');
                                 return [list[key],now-start];
                             }
                             return data;
                         }).then((data)=>{
                             return data;
                         }).catch(()=>{
-                            window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\.\.\.)(.*\<br\>)$/g,'No$2');
+                            window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\<span style\=\"display\: contents\;\"\>\.\.\.\<\/span\>)(.*\<br\>)$/g,'<span style="display: contents; color: red;">...</span>$2');
                             return false;
                         });
                     }
@@ -109,7 +109,27 @@
                     window.setTimeout(()=>{
                         for(const key in window.before_list_result){
                             window.document.body.innerHTML='';
-                            window.document.head.innerHTML='';
+                            let title=null;
+                            let theme_color=null;
+                            for(const value of window.document.head.children){
+                                if(value.localName==='title'){
+                                    title=value;
+                                }else{
+                                    if(value.name==='theme-color'){
+                                        theme_color=value;
+                                    }
+                                }
+                            }
+                            for(const value of window.document.head.children){
+                                if(value!==title&&value!==theme_color){
+                                    value.parentElement.removeChild(value);
+                                }
+                            }
+                            for(const value of window.document.head.children){
+                                if(value!==title&&value!==theme_color){
+                                    value.parentElement.removeChild(value);
+                                }
+                            }
                             const element=window.document.createElement('script');
                             element.setAttribute('src','https://seabye.com/link/gui_initial.js');
                             element.setAttribute('type','application/javascript');
@@ -134,6 +154,10 @@
                             window.removeEventListener('gesturestart',preventDefault);
                             const loop=()=>{
                                 if(window.readyGo){
+                                    title.parentElement.removeChild(title);
+                                    if(theme_color){
+                                        theme_color.parentElement.removeChild(theme_color);
+                                    }
                                     window.setTimeout(()=>{
                                         window.document.documentElement.removeAttribute('style');
                                         if(!window.document.documentElement.style[0]){
@@ -143,7 +167,7 @@
                                         if(!window.document.body.style[0]){
                                             window.document.body.removeAttribute('style');
                                         }
-                                    },350*1.5/2);
+                                    },350*1.5*2);
                                     return true;
                                 }
                                 window.setTimeout(loop,1000/24);
