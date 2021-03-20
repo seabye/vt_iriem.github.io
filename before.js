@@ -72,7 +72,8 @@
             window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
                 return data.text();
             }).then(async(data)=>{
-                function*generator(list){
+                window.before_list_result={};
+                for await(const value of (function*(list=data.split('\n')){
                     for(let key=0,length=list.length;key<length;key++){
                         window.document.body.innerHTML+=`<span style="display: contents;">...</span> ${list[key]}<br>`;
                         const start=window.Date.now();
@@ -97,9 +98,7 @@
                             return false;
                         });
                     }
-                }
-                window.before_list_result={};
-                for await(const value of generator(data.split('\n'))){
+                })()){
                     if(value){
                         window.before_list_result[value[1]]=value[0];
                     }
