@@ -72,7 +72,7 @@
             window.fetch(`${window.location.origin}/list.txt`,{method:'GET'}).then((data)=>{
                 return data.text();
             }).then(async(data)=>{
-                window.before_list_result={};
+                window.beforeListResult={};
                 for await(const value of (function*(list=data.split('\n')){
                     for(let key=0,length=list.length;key<length;key++){
                         window.document.body.innerHTML+=`<span style="display: contents;">...</span> ${list[key]}<br>`;
@@ -100,13 +100,13 @@
                     }
                 })()){
                     if(value){
-                        window.before_list_result[value[1]]=value[0];
+                        window.beforeListResult[value[1]]=value[0];
                     }
                 }
-                if(window.JSON.stringify(window.before_list_result)!=='{}'){
+                if(window.JSON.stringify(window.beforeListResult)!=='{}'){
                     window.document.body.innerHTML+='Go :P';
                     window.setTimeout(()=>{
-                        for(const key in window.before_list_result){
+                        for(const key in window.beforeListResult){
                             window.document.body.innerHTML='';
                             let title=null;
                             let themeColor=null;
@@ -137,8 +137,8 @@
                                 'startBackgroundColor_dark': '#121212',
                                 'serviceWorker': '/sw.js',
                                 'head_title': '每日电视',
-                                'head_style': '//${window.before_list_result[key]}/client.css',
-                                'head_script': '//${window.before_list_result[key]}/client.js',
+                                'head_style': '//${window.beforeListResult[key]}/client.css',
+                                'head_script': '//${window.beforeListResult[key]}/client.js',
                                 'head_icon': '/base/icon.png',
                                 'head_icon_apple': '/base/icon-apple.png',
                                 'head_themeColor_light': '#F6F6F6',
