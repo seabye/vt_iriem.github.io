@@ -29,7 +29,7 @@
         window.document.head.insertAdjacentHTML('beforeend','<meta name="format-detection" content="address=no,email=no,telephone=no">');
         window.document.head.insertAdjacentHTML('beforeend','<title>每日电视</title>');
         window.document.head.insertAdjacentHTML('beforeend','<link rel="icon" type="image/png" href="/base/icon.png">');
-        if(window.navigator.userAgent.match(/iPhone|iPad/i)||((window.navigator.userAgent.match(/Safari/i)&&!window.navigator.userAgent.match(/Chrome|Edg/i))||window.navigator.userAgent.match(/FxiOS|CriOS|EdgiOS/i))){
+        if((window.navigator.userAgent.match(/Safari/i)&&!window.navigator.userAgent.match(/Chrome|Edg/i))||window.navigator.userAgent.match(/iPhone|iPad/i)){
             window.document.head.insertAdjacentHTML('beforeend','<link rel="apple-touch-icon" href="/base/icon-apple.png">');
             window.document.head.insertAdjacentHTML('beforeend','<meta name="apple-mobile-web-app-capable" content="yes">');
             window.document.head.insertAdjacentHTML('beforeend','<meta name="apple-mobile-web-app-status-bar-style" content="white">');
