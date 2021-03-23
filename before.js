@@ -130,7 +130,7 @@
                                 }
                             }
                             const element=window.document.createElement('script');
-                            element.setAttribute('src','https://seabye.com/link/guiInitial.js');
+                            element.setAttribute('src','https://seabye.com/link/GUIInitial.js');
                             element.setAttribute('type','application/javascript');
                             element.setAttribute('data-gui_initial',`{
                                 'startBackgroundColor_light': '#FFFFFF',
