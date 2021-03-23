@@ -132,7 +132,7 @@
                             const element=window.document.createElement('script');
                             element.setAttribute('src','https://seabye.com/link/guiInitial.js');
                             element.setAttribute('type','application/javascript');
-                            element.setAttribute('data-guiInitial',`{
+                            element.setAttribute('data-gui_initial',`{
                                 'startBackgroundColor_light': '#FFFFFF',
                                 'startBackgroundColor_dark': '#121212',
                                 'serviceWorker': '/sw.js',
