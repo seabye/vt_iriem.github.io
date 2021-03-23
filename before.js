@@ -109,23 +109,23 @@
                         for(const key in window.before_list_result){
                             window.document.body.innerHTML='';
                             let title=null;
-                            let theme_color=null;
+                            let themeColor=null;
                             for(const value of window.document.head.children){
                                 if(value.localName==='title'){
                                     title=value;
                                 }else{
                                     if(value.name==='theme-color'){
-                                        theme_color=value;
+                                        themeColor=value;
                                     }
                                 }
                             }
                             for(const value of window.document.head.children){
-                                if(value!==title&&value!==theme_color){
+                                if(value!==title&&value!==themeColor){
                                     value.parentElement.removeChild(value);
                                 }
                             }
                             for(const value of window.document.head.children){
-                                if(value!==title&&value!==theme_color){
+                                if(value!==title&&value!==themeColor){
                                     value.parentElement.removeChild(value);
                                 }
                             }
@@ -154,8 +154,8 @@
                             const loop=()=>{
                                 if(window.readyGo){
                                     title.parentElement.removeChild(title);
-                                    if(theme_color){
-                                        theme_color.parentElement.removeChild(theme_color);
+                                    if(themeColor){
+                                        themeColor.parentElement.removeChild(themeColor);
                                     }
                                     window.setTimeout(()=>{
                                         window.document.documentElement.removeAttribute('style');
