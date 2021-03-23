@@ -130,19 +130,19 @@
                                 }
                             }
                             const element=window.document.createElement('script');
-                            element.setAttribute('src','https://seabye.com/link/gui_initial.js');
+                            element.setAttribute('src','https://seabye.com/link/guiInitial.js');
                             element.setAttribute('type','application/javascript');
-                            element.setAttribute('data-gui_initial',`{
-                                'start_background_color_light': '#FFFFFF',
-                                'start_background_color_dark': '#121212',
-                                'service_worker': '/sw.js',
+                            element.setAttribute('data-guiInitial',`{
+                                'startBackgroundColor_light': '#FFFFFF',
+                                'startBackgroundColor_dark': '#121212',
+                                'serviceWorker': '/sw.js',
                                 'head_title': '每日电视',
                                 'head_style': '//${window.before_list_result[key]}/client.css',
                                 'head_script': '//${window.before_list_result[key]}/client.js',
                                 'head_icon': '/base/icon.png',
                                 'head_icon_apple': '/base/icon-apple.png',
-                                'head_theme_color_light': '#F6F6F6',
-                                'head_theme_color_dark': '#1E1E1E',
+                                'head_themeColor_light': '#F6F6F6',
+                                'head_themeColor_dark': '#1E1E1E',
                                 'head_manifest': '/manifest.webmanifest'
                             }`);
                             window.document.head.insertAdjacentElement('beforeend',element);
