@@ -75,7 +75,7 @@
                 window.beforeListResult={};
                 for await(const value of (function*(list=data.split('\n')){
                     for(let key=0,length=list.length;key<length;key++){
-                        window.document.body.innerHTML+=`<span style="display: contents;">...</span> ${list[key]}<br>`;
+                        window.document.body.innerHTML+=`<span style="display: contents;">...</span> ${list[key].replace(/\:\d+/,'')}<br>`;
                         const start=window.Date.now();
                         const controller=new window.AbortController();
                         window.setTimeout(()=>{
