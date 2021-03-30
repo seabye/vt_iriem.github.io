@@ -69,7 +69,7 @@
         };
         loop();
         window.setTimeout(()=>{
-            window.fetch(`${window.location.origin}/content/www/list.txt`,{method:'GET'}).then((data)=>{
+            window.fetch(`${window.location.origin}/content/resource/list.txt`,{method:'GET'}).then((data)=>{
                 return data.text();
             }).then(async(data)=>{
                 window.beforeListResult={};
