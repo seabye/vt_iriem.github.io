@@ -54,7 +54,7 @@
         window.document.body.style.setProperty('margin','unset');
         window.document.body.style.setProperty('padding','20px');
         window.document.body.style.setProperty('line-height','161.8%');
-        window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'#121212'}`);
+        window.document.body.style.setProperty('color',`${window.matchMedia('(prefers-color-scheme:dark)').matches?'rgba(255,255,255,0.8)':'rgba(0,0,0,0.8)'}`);
         window.document.body.style.setProperty('font-family','"Menlo", "Monaco", "Consolas", "Courier New", "Ubuntu Mono", "Microsoft YaHei", monospace, "SF Pro"');
         window.document.body.style.setProperty('white-space','pre-line');
         window.document.body.style.setProperty('font-weight','normal');
@@ -87,14 +87,14 @@
             }).then((data)=>{
               const now=window.Date.now();
               if(data.status===200){
-                window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\<span style\=\"display\: contents\;\"\>\.\.\.\<\/span\>)(.*\<br\>)$/g,'<span style="display: contents; color: green;">Yes</span>$2');
+                window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\<span style\=\"display\: contents\;\"\>\.\.\.\<\/span\>)(.*\<br\>)$/g,'<span style="display: contents; color: #00BB00;">Yes</span>$2');
                 return [list[key],now-start];
               }
               return data;
             }).then((data)=>{
               return data;
             }).catch(()=>{
-              window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\<span style\=\"display\: contents\;\"\>\.\.\.\<\/span\>)(.*\<br\>)$/g,'<span style="display: contents; color: red;">...</span>$2');
+              window.document.body.innerHTML=window.document.body.innerHTML.replace(/(\<span style\=\"display\: contents\;\"\>\.\.\.\<\/span\>)(.*\<br\>)$/g,'<span style="display: contents; color: #CC0000;">...</span>$2');
               return false;
             });
           }
