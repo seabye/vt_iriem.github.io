@@ -177,7 +177,7 @@
           },350*2);
         }else{
           // window.document.body.innerHTML+='Server Error :(';
-          window.document.body.innerHTML+='在做了';
+          window.document.body.innerHTML+='正在开发, 预计 2021年07月~08月 启动.';
         }
       });
     },350);
