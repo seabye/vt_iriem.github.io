@@ -176,7 +176,8 @@
             }
           },350*2);
         }else{
-          window.document.body.innerHTML+='Server Error :(';
+          // window.document.body.innerHTML+='Server Error :(';
+          window.document.body.innerHTML+='在做了';
         }
       });
     },350);
