@@ -72,7 +72,7 @@
       fetch(`${location.origin}/content/resource/list.txt`,{method:'GET'}).then((data)=>{
         return data.text();
       }).then(async(data)=>{
-        beforeListResult={};
+        globalThis.beforeListResult={};
         for await(const value of (function*(list=data.split('\n')){
           for(let key=0,length=list.length;key<length;key++){
             document.body.innerHTML+=`<span style="display: contents;">...</span> ${list[key].replace(/\:\d+/,'')}<br>`;
