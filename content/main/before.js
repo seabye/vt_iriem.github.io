@@ -18,7 +18,7 @@
     addEventListener('gesturestart',preventDefault);
     document.documentElement.style.setProperty('background','center/38.4% no-repeat');
     document.documentElement.style.setProperty('background-color',`${matchMedia('(prefers-color-scheme:dark)').matches?'#121212':'#FFFFFF'}`);
-    document.documentElement.style.setProperty('background-image','url(/content/resource/image/before.png)');
+    document.documentElement.style.setProperty('background-image','url(/content/asset/image/before.png)');
     document.documentElement.style.setProperty('overflow','hidden');
     document.documentElement.style.setProperty('position','absolute');
     document.documentElement.style.setProperty('left','0');
@@ -28,16 +28,16 @@
     document.head.insertAdjacentHTML('beforeend','<meta name="viewport" content="width=device-width,user-scalable=no,viewport-fit=cover">');
     document.head.insertAdjacentHTML('beforeend','<meta name="format-detection" content="address=no,email=no,telephone=no">');
     document.head.insertAdjacentHTML('beforeend','<title>每日电视</title>');
-    document.head.insertAdjacentHTML('beforeend','<link rel="icon" type="image/png" href="/content/resource/image/icon/icon.png">');
+    document.head.insertAdjacentHTML('beforeend','<link rel="icon" type="image/png" href="/content/asset/image/icon/icon.png">');
     if((navigator.userAgent.match(/Safari/i)&&!navigator.userAgent.match(/Chrome|Edg/i))||navigator.userAgent.match(/iPhone|iPad/i)){
-      document.head.insertAdjacentHTML('beforeend','<link rel="apple-touch-icon" href="/content/resource/image/icon/icon-apple.png">');
+      document.head.insertAdjacentHTML('beforeend','<link rel="apple-touch-icon" href="/content/asset/image/icon/icon-apple.png">');
       document.head.insertAdjacentHTML('beforeend','<meta name="apple-mobile-web-app-capable" content="yes">');
       document.head.insertAdjacentHTML('beforeend','<meta name="apple-mobile-web-app-status-bar-style" content="white">');
       document.head.insertAdjacentHTML('beforeend','<meta name="apple-mobile-web-app-title" content="每日电视">');
     }else{
       document.head.insertAdjacentHTML('beforeend',`<meta name="theme-color" content="${matchMedia('(prefers-color-scheme:dark)').matches?'#1E1E1E':'#F6F6F6'}">`);
     }
-    document.head.insertAdjacentHTML('beforeend','<link rel="manifest" href="/content/www/manifest.webmanifest">');
+    document.head.insertAdjacentHTML('beforeend','<link rel="manifest" href="/content/main/manifest.webmanifest">');
     const loop=()=>{
       if(document.body){
         document.body.style.setProperty('overflow','hidden');
@@ -69,7 +69,7 @@
     };
     loop();
     setTimeout(()=>{
-      fetch(`${location.origin}/content/resource/list.txt`,{method:'GET'}).then((data)=>{
+      fetch(`${location.origin}/content/asset/list.txt`,{method:'GET'}).then((data)=>{
         return data.text();
       }).then(async(data)=>{
         globalThis.beforeListResult={};
@@ -130,20 +130,20 @@
                 }
               }
               const element=document.createElement('script');
-              element.setAttribute('src','https://seabye.com/content/package/GUIInitial/GUIInitial.js');
+              element.setAttribute('src','https://seabye.com/content/module/GUIInitial/GUIInitial.js');
               element.setAttribute('type','application/javascript');
               element.setAttribute('data-gui_initial',`{
                 'startBackgroundColor_light': '#FFFFFF',
                 'startBackgroundColor_dark': '#121212',
                 'serviceWorker': '/sw.js',
                 'head_title': '每日电视',
-                'head_style': '//${beforeListResult[key]}/content/www/client.css',
-                'head_script': '//${beforeListResult[key]}/content/www/client.js',
-                'head_icon': '/content/resource/image/icon/icon.png',
-                'head_icon_apple': '/content/resource/image/icon/icon-apple.png',
+                'head_style': '//${beforeListResult[key]}/content/main/client.css',
+                'head_script': '//${beforeListResult[key]}/content/main/client.js',
+                'head_icon': '/content/asset/image/icon/icon.png',
+                'head_icon_apple': '/content/asset/image/icon/icon-apple.png',
                 'head_themeColor_light': '#F6F6F6',
                 'head_themeColor_dark': '#1E1E1E',
-                'head_manifest': '/content/www/manifest.webmanifest'
+                'head_manifest': '/content/main/manifest.webmanifest'
               }`);
               document.head.insertAdjacentElement('beforeend',element);
               removeEventListener('touchstart',preventDefault);
