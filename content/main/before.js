@@ -1,7 +1,5 @@
 'use strict';
 // #before
-  // console
-  console.log('#### start: before.js');
 // #import
 // #variable
 // #method
@@ -184,5 +182,3 @@
   }
 // #debug
 // #after
-  // console
-  console.log('#### end: before.js');
