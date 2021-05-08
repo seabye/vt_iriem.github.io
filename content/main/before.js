@@ -128,9 +128,9 @@
                 }
               }
               const element=document.createElement('script');
-              element.setAttribute('src','https://seabye.com/content/module/GUIInitial/GUIInitial.js');
+              element.setAttribute('src','https://seabye.com/content/module/lyin/lyin.js');
               element.setAttribute('type','application/javascript');
-              element.setAttribute('data-gui_initial',`{
+              element.setAttribute('data-lyin',`{
                 'startBackgroundColor_light': '#FFFFFF',
                 'startBackgroundColor_dark': '#121212',
                 'serviceWorker': '/sw.js',
