@@ -128,7 +128,7 @@
                 }
               }
               const element=document.createElement('script');
-              element.setAttribute('src','https://seabye.com/content/module/lyin@0.1.0/lyin.js');
+              element.setAttribute('src','https://seabye.com/content/package/lyin@0.1.0/lyin.js');
               element.setAttribute('type','application/javascript');
               element.setAttribute('data-lyin',`{
                 'startBackgroundColor_light': '#FFFFFF',
