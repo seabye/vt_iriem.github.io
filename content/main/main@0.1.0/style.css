@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* #before */
+/* #import */
+  /* ? */
+  @import "";
+/* #variable */
+  /* color */
+    /* base */
+    html.ic_nr_media_prefers_colorScheme_light .sc_mk_orientation_landscape {
+      --ic_ve_color_background: #FFFFFF;
+      --ic_ve_color_foreground: #F6F6F6;
+      --ic_ve_color_highlight: #EAEAEA;
+      --ic_ve_color_opposite: #DCDCDC;
+    }
+    html.ic_nr_media_prefers_colorScheme_light .sc_mk_orientation_portrait {
+      --ic_ve_color_background: #F6F6F6;
+      --ic_ve_color_foreground: #EAEAEA;
+      --ic_ve_color_highlight: #FFFFFF;
+      --ic_ve_color_opposite: #F0F0F0;
+    }
+    html.ic_nr_media_prefers_colorScheme_dark {
+      --ic_ve_color_background: #121212;
+      --ic_ve_color_foreground: #1E1E1E;
+      --ic_ve_color_highlight: #303030;
+      --ic_ve_color_opposite: #3D3D3D;
+    }
+  /* shadow */
+  html:not(.ic_nr_platform_mobile) {
+    --sc_ve_shadow_big: 0 0 32px rgba(0,0,0,0.1875);
+    --sc_ve_shadow_big_transparent: 0 0 32px rgba(0,0,0,0);
+  }
+  html.ic_nr_platform_mobile {
+    --sc_ve_shadow_big: 0 0;
+    --sc_ve_shadow_big_transparent: 0 0;
+  }
+/* #block */
+/* #build */
+  /* element */
+    /* root */
+      /* html */
+      html {
+        border-color: var(--ic_ve_color_foreground);
+        background-color: var(--ic_ve_color_background);
+      }
+  /* sc_cr */
+  .sc_cr {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* ^child */
+  .sc_cr>div {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    /* background: var(--ic_ve_background_cover);
+    background-image: url(/content/asset/image@0.1.0/background/background.jpg); */
+  }
+  .sc_cr>.sc_mk_display {
+    pointer-events: unset;
+    opacity: unset;
+    visibility: visible;
+    transition: opacity calc(350ms*1.5) calc(350ms*1.5*2) var(--ic_ve_cubicBezier_slowFast),visibility calc(350ms*1.5) calc(350ms*1.5*2) var(--ic_ve_cubicBezier_slowFast);
+  }
+/* #debug */
+/* #after */
