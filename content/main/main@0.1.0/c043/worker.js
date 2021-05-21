@@ -5,7 +5,7 @@
 // #block
 // #build
   // setInterval(()=>{
-  //   fetch(`${location.origin}/server100/notification/天空之城`).then((data)=>{
+  //   fetch(`${location.origin}/s100/notification/天空之城`).then((data)=>{
   //     return data.json();
   //   }).then((data)=>{
   //     console.log(data);

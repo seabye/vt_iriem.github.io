@@ -7,7 +7,7 @@
   // run
   export const run=(tyin,els)=>{
     tyin.elementCreate({
-      sc_cr_client042:{
+      sc_cr_c042:{
         function(){
           tyin.loadPackage_fontAwesomeFree();
           tyin.runObject({
@@ -15,12 +15,12 @@
               const run=()=>{
                 tyin.insertStyle('html * { transition: unset !important; }',350/2);
               };
-              tyin.listenDOM('add',els.sc_cr_client042,'observe_resize',(data)=>{
+              tyin.listenDOM('add',els.sc_cr_c042,'observe_resize',(data)=>{
                 tyin.isPortrait(data.contentRect.width,data.contentRect.height+192,()=>{
-                  tyin.elementState(els.sc_cr_client042,'sc_mk_orientation_portrait','sc_mk_orientation_landscape',true);
+                  tyin.elementState(els.sc_cr_c042,'sc_mk_orientation_portrait','sc_mk_orientation_landscape',true);
                   run();
                 },()=>{
-                  tyin.elementState(els.sc_cr_client042,'sc_mk_orientation_landscape','sc_mk_orientation_portrait',true);
+                  tyin.elementState(els.sc_cr_c042,'sc_mk_orientation_landscape','sc_mk_orientation_portrait',true);
                   run();
                 });
               });
@@ -28,8 +28,8 @@
             client_ve_page(){
               if(els.client_ve_page&&els.client_ve_page.result){
                 tyin.loop(()=>{
-                  if(els.sc_cr_client042.sc_bk_block_float){
-                    els.sc_cr_client042.sc_bk_block_float.add(els.sc_cr_client042.sc_bk_template_float({
+                  if(els.sc_cr_c042.sc_bk_block_float){
+                    els.sc_cr_c042.sc_bk_block_float.add(els.sc_cr_c042.sc_bk_template_float({
                       control_type:'sc_bk_control_base',
                       control_data:{
                         array:[],
@@ -45,27 +45,27 @@
               }
             }
           });
-          els.sc_cr_client042.load_player=(src,poster=`${els.client_ve_serverURL}/content/asset/image@0.1.0/player/poster.png`,title,description)=>{
-            tyin.package_HLS_play('HLS',els.sc_cr_client042_cr_cr_video,src,poster);
-            els.sc_cr_client042_cr_player_cr_sync.style.setProperty('background-image',`url(${poster})`);
-            els.sc_cr_client042_cr_cr_video.play();
-            tyin.elementState(els.sc_cr_client042_cr,'sc_mk_theater','',true);
-            tyin.elementState(els.sc_cr_client042_cr_player_cr_cover.children[0],'fa-compress-alt','fa-expand-alt',true);
+          els.sc_cr_c042.load_player=(src,poster=`${els.client_ve_serverURL}/content/asset/image@0.1.0/player/poster.png`,title,description)=>{
+            tyin.package_HLS_play('HLS',els.sc_cr_c042_cr_cr_video,src,poster);
+            els.sc_cr_c042_cr_player_cr_sync.style.setProperty('background-image',`url(${poster})`);
+            els.sc_cr_c042_cr_cr_video.play();
+            tyin.elementState(els.sc_cr_c042_cr,'sc_mk_theater','',true);
+            tyin.elementState(els.sc_cr_c042_cr_player_cr_cover.children[0],'fa-compress-alt','fa-expand-alt',true);
             setTimeout(()=>{
-              els.sc_cr_client042_cr_cr_video.setAttribute('controls','');
+              els.sc_cr_c042_cr_cr_video.setAttribute('controls','');
             },350*1.25*2);
-            els.sc_cr_client042_cr_player_control_info_title.innerHTML=title;
-            els.sc_cr_client042_cr_player_control_info_description.innerHTML=description;
+            els.sc_cr_c042_cr_player_control_info_title.innerHTML=title;
+            els.sc_cr_c042_cr_player_control_info_description.innerHTML=description;
           };
-          els.sc_cr_client042.load_playlist=()=>{};
-          els.sc_cr_client042.sc_bk_control_base=(array=['back','refresh','_title','page','filter','edit','more'],title,insert_element)=>{
+          els.sc_cr_c042.load_playlist=()=>{};
+          els.sc_cr_c042.sc_bk_control_base=(array=['back','refresh','_title','page','filter','edit','more'],title,insert_element)=>{
             if(array.includes('back')){
               tyin.elementCreate({
                 sc_bk_control_base_back:{
                   element:[,,'<i class="fas fa-arrow-left"></i>'],
                   function(){
                     tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                      els.sc_cr_client042[els.sc_cr_client042_cr_cr_cr.dataset.current_who].back();
+                      els.sc_cr_c042[els.sc_cr_c042_cr_cr_cr.dataset.current_who].back();
                     },undefined,0);
                   }
                 }
@@ -121,7 +121,7 @@
                     let touchStart_clientX=0;
                     let prev_element=null;
                     this.element.addEventListener('touchstart',(event)=>{
-                      prev_element=document.querySelectorAll(`.${els.sc_cr_client042_cr_cr_cr.dataset.current_who}_prev`);
+                      prev_element=document.querySelectorAll(`.${els.sc_cr_c042_cr_cr_cr.dataset.current_who}_prev`);
                       prev_element=prev_element[prev_element.length-1];
                       if(event.target===this.element){
                         touchStart_clientX=event.changedTouches[0].clientX;
@@ -140,7 +140,7 @@
                       setTimeout(()=>{
                         setTimeout(()=>{
                           if(event.changedTouches[0].clientX-touchStart_clientX>this.element.parentElement.offsetWidth/2){
-                            els.sc_cr_client042[els.sc_cr_client042_cr_cr_cr.dataset.current_who].back();
+                            els.sc_cr_c042[els.sc_cr_c042_cr_cr_cr.dataset.current_who].back();
                           }
                         },0);
                         setTimeout(()=>{
@@ -199,8 +199,8 @@
               },insert_element);
             }
           };
-          els.sc_cr_client042.sc_bk_view_listIndex=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_view_listText=(data,insert_element)=>{
+          els.sc_cr_c042.sc_bk_view_listIndex=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_view_listText=(data,insert_element)=>{
             tyin.for(data,(...data)=>{
               tyin.elementCreate({
                 sc_bk_view_listText_block:{
@@ -267,50 +267,50 @@
               },insert_element);
             },0);
           };
-          els.sc_cr_client042.sc_bk_view_listImage=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_view_contentVideo=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_view_contentPlaylist=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_view_contentForum=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_view_otherComment=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_view_otherEdit=(data,insert_element)=>{};
-          els.sc_cr_client042.sc_bk_template_float=(data,record,callback=()=>{})=>{
-            if(!els.sc_cr_client042.sc_bk_template_float.record){
-              els.sc_cr_client042.sc_bk_template_float.record=[];
+          els.sc_cr_c042.sc_bk_view_listImage=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_view_contentVideo=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_view_contentPlaylist=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_view_contentForum=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_view_otherComment=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_view_otherEdit=(data,insert_element)=>{};
+          els.sc_cr_c042.sc_bk_template_float=(data,record,callback=()=>{})=>{
+            if(!els.sc_cr_c042.sc_bk_template_float.record){
+              els.sc_cr_c042.sc_bk_template_float.record=[];
             }
             let record_state=false;
             if(record){
-              tyin.for(els.sc_cr_client042.sc_bk_template_float.record,(...data)=>{
+              tyin.for(els.sc_cr_c042.sc_bk_template_float.record,(...data)=>{
                 if(data[2]===record){
                   record_state=true;
                 }
               },0);
             }
             if(!record_state){
-              if(record&&!els.sc_cr_client042.sc_bk_template_float.record.includes(record)){
+              if(record&&!els.sc_cr_c042.sc_bk_template_float.record.includes(record)){
                 tyin.debug(()=>{
-                  console.log('++++ sc_cr_client042.sc_bk_template_float.record:',record);
+                  console.log('++++ sc_cr_c042.sc_bk_template_float.record:',record);
                 });
-                els.sc_cr_client042.sc_bk_template_float.record.push(record);
+                els.sc_cr_c042.sc_bk_template_float.record.push(record);
               }
               const result=tyin.elementCreate({
                 '':{
                   function(){
                     tyin.listenDOM('add',this.element,'pointer_up',(data)=>{
                       if(data.target===this.element&&data.target.classList.contains('ic_active')){
-                        els.sc_cr_client042.sc_bk_block_float.back();
+                        els.sc_cr_c042.sc_bk_block_float.back();
                       }
                     },undefined,0);
                   },
                   sc_bk_block_f_box:{
                     [`sc_bk_block_f_box_control ${data.control_type}`]:{
                       function(){
-                        els.sc_cr_client042[data.control_type](data.control_data.array,data.control_data.title,this.element);
+                        els.sc_cr_c042[data.control_type](data.control_data.array,data.control_data.title,this.element);
                       }
                     },
                     sc_bk_block_f_box_view:{
                       [data.view_type]:{
                         function(){
-                          els.sc_cr_client042[data.view_type](data.view_data,this.element);
+                          els.sc_cr_c042[data.view_type](data.view_data,this.element);
                         }
                       }
                     }
@@ -324,36 +324,36 @@
               return result[''];
             }
           };
-          els.sc_cr_client042.sc_bk_template_solid=(data,record,callback=()=>{})=>{
-            if(!els.sc_cr_client042.sc_bk_template_solid.record){
-              els.sc_cr_client042.sc_bk_template_solid.record=[];
+          els.sc_cr_c042.sc_bk_template_solid=(data,record,callback=()=>{})=>{
+            if(!els.sc_cr_c042.sc_bk_template_solid.record){
+              els.sc_cr_c042.sc_bk_template_solid.record=[];
             }
             let record_state=false;
             if(record){
-              tyin.for(els.sc_cr_client042.sc_bk_template_solid.record,(...data)=>{
+              tyin.for(els.sc_cr_c042.sc_bk_template_solid.record,(...data)=>{
                 if(data[2]===record){
                   record_state=true;
                 }
               },0);
             }
             if(!record_state){
-              if(record&&!els.sc_cr_client042.sc_bk_template_solid.record.includes(record)){
+              if(record&&!els.sc_cr_c042.sc_bk_template_solid.record.includes(record)){
                 tyin.debug(()=>{
-                  console.log('++++ sc_cr_client042.sc_bk_template_solid.record:',record);
+                  console.log('++++ sc_cr_c042.sc_bk_template_solid.record:',record);
                 });
-                els.sc_cr_client042.sc_bk_template_solid.record.push(record);
+                els.sc_cr_c042.sc_bk_template_solid.record.push(record);
               }
               const result=tyin.elementCreate({
                 '':{
                   [`sc_bk_block_s_control ${data.control_type}`]:{
                     function(){
-                      els.sc_cr_client042[data.control_type](data.control_data.array,data.control_data.title,this.element);
+                      els.sc_cr_c042[data.control_type](data.control_data.array,data.control_data.title,this.element);
                     }
                   },
                   sc_bk_block_s_view:{
                     [data.view_type]:{
                       function(){
-                        els.sc_cr_client042[data.view_type](data.view_data,this.element);
+                        els.sc_cr_c042[data.view_type](data.view_data,this.element);
                       }
                     }
                   }
@@ -363,9 +363,9 @@
               return result[''];
             }
           };
-          els.sc_cr_client042.sc_bk_block_float=tyin.elementBlock(els.sc_cr_client042,'sc_bk_block_float','afterbegin',350*1.25);
-          els.sc_cr_client042.sc_bk_block_solid_video=tyin.elementBlock(els.sc_cr_client042_cr_cr_cr_video,'sc_bk_block_solid_video',undefined,350*1.25);
-          els.sc_cr_client042.sc_bk_block_solid_video.add(els.sc_cr_client042.sc_bk_template_solid({
+          els.sc_cr_c042.sc_bk_block_float=tyin.elementBlock(els.sc_cr_c042,'sc_bk_block_float','afterbegin',350*1.25);
+          els.sc_cr_c042.sc_bk_block_solid_video=tyin.elementBlock(els.sc_cr_c042_cr_cr_cr_video,'sc_bk_block_solid_video',undefined,350*1.25);
+          els.sc_cr_c042.sc_bk_block_solid_video.add(els.sc_cr_c042.sc_bk_template_solid({
             control_type:'sc_bk_control_base',
             control_data:{
               array:[],
@@ -383,7 +383,7 @@
                     description:'限 iPhoneOS 与 iPadOS 和 macOS Safari.',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_video.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_video.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -399,7 +399,7 @@
                         },this.element,async(data)=>{
                           tyin.elementState(data.sc_bk_view_listText,'ic_bk_progressIndicatorCircular_indeterminate_24','',true);
                           const container=data.sc_bk_view_listText.children[0].children[0];
-                          await tyin.fetch(`${els.client_ve_serverURL}/server100/video/tvLive`,'GET',undefined,undefined,undefined,'json',(data_)=>{
+                          await tyin.fetch(`${els.client_ve_serverURL}/s100/video/tvLive`,'GET',undefined,undefined,undefined,'json',(data_)=>{
                             let html='';
                             if(data_.result){
                               tyin.for(data_.result,(...data)=>{
@@ -409,7 +409,7 @@
                               tyin.listenDOM('add',data.sc_bk_view_listText,'pointer_up',(data)=>{
                                 const target=data.target.lastElementChild;
                                 if(target.dataset.live_url){
-                                  els.sc_cr_client042.load_player(target.dataset.live_url,target.dataset.live_logo,target.dataset.live_name,'电视台');
+                                  els.sc_cr_c042.load_player(target.dataset.live_url,target.dataset.live_logo,target.dataset.live_name,'电视台');
                                 }
                               },undefined,0);
                             }else{
@@ -427,7 +427,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_video.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_video.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -450,7 +450,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_video.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_video.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -473,7 +473,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_video.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_video.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -491,12 +491,12 @@
                     }
                   }
                 ],
-                description:`client042 已停止编写, <a href="${location.search?location.search.replace('&version=client042','').replace('version=client042','')+'&version=client043'.replace('?&','?'):'?version=client043'}" style="color: var(--ic_ve_color_system_blue);">点此访问 client043</a>.`
+                description:`c042 已停止编写, <a href="${location.search?location.search.replace('&version=c042','').replace('version=c042','')+'&version=c043'.replace('?&','?'):'?version=c043'}" style="color: var(--ic_ve_color_system_blue);">点此访问 c043</a>.`
               }
             ]
-          },els.sc_cr_client042_cr_menu_video),els.sc_cr_client042_cr_menu_video);
-          els.sc_cr_client042.sc_bk_block_solid_interactive=tyin.elementBlock(els.sc_cr_client042_cr_cr_cr_interactive,'sc_bk_block_solid_interactive',undefined,350*1.25);
-          els.sc_cr_client042.sc_bk_block_solid_interactive.add(els.sc_cr_client042.sc_bk_template_solid({
+          },els.sc_cr_c042_cr_menu_video),els.sc_cr_c042_cr_menu_video);
+          els.sc_cr_c042.sc_bk_block_solid_interactive=tyin.elementBlock(els.sc_cr_c042_cr_cr_cr_interactive,'sc_bk_block_solid_interactive',undefined,350*1.25);
+          els.sc_cr_c042.sc_bk_block_solid_interactive.add(els.sc_cr_c042.sc_bk_template_solid({
             control_type:'sc_bk_control_base',
             control_data:{
               array:[],
@@ -513,7 +513,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_interactive.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_interactive.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -536,7 +536,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_interactive.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_interactive.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -559,7 +559,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_interactive.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_interactive.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -579,9 +579,9 @@
                 ]
               }
             ]
-          },els.sc_cr_client042_cr_menu_interactive),els.sc_cr_client042_cr_menu_interactive);
-          els.sc_cr_client042.sc_bk_block_solid_account=tyin.elementBlock(els.sc_cr_client042_cr_cr_cr_account,'sc_bk_block_solid_account',undefined,350*1.25);
-          els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+          },els.sc_cr_c042_cr_menu_interactive),els.sc_cr_c042_cr_menu_interactive);
+          els.sc_cr_c042.sc_bk_block_solid_account=tyin.elementBlock(els.sc_cr_c042_cr_cr_cr_account,'sc_bk_block_solid_account',undefined,350*1.25);
+          els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
             control_type:'sc_bk_control_base',
             control_data:{
               array:[],
@@ -598,7 +598,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -621,7 +621,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -644,7 +644,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -667,7 +667,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -690,7 +690,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -718,7 +718,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -741,7 +741,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -764,7 +764,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -787,7 +787,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -815,7 +815,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -838,7 +838,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -866,7 +866,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -889,7 +889,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -917,7 +917,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -940,7 +940,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -963,7 +963,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -986,7 +986,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1014,7 +1014,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1037,7 +1037,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1060,7 +1060,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1083,7 +1083,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1111,7 +1111,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1134,7 +1134,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1157,7 +1157,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1180,7 +1180,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1208,7 +1208,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1231,7 +1231,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1249,7 +1249,7 @@
                                   description:'作者的快捷键.',
                                   function(){
                                     tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                      els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                                      els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                                         control_type:'sc_bk_control_base',
                                         control_data:{
                                           array:['back'],
@@ -1266,7 +1266,7 @@
                                                 button:'',
                                                 function(){
                                                   tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                    els.sc_cr_client042.load_player('https://56.com-t-56.com/20190728/23849_9b8076fd/index.m3u8','https://images.cnblogsc.com/pic/upload/vod/2019-04/201904241556071910.jpg','复仇者联盟4','安东尼·罗素, 乔·罗素');
+                                                    els.sc_cr_c042.load_player('https://56.com-t-56.com/20190728/23849_9b8076fd/index.m3u8','https://images.cnblogsc.com/pic/upload/vod/2019-04/201904241556071910.jpg','复仇者联盟4','安东尼·罗素, 乔·罗素');
                                                   },undefined,0);
                                                 }
                                               },
@@ -1276,7 +1276,7 @@
                                                 button:'',
                                                 function(){
                                                   tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                    els.sc_cr_client042.load_player('http://ivi.bupt.edu.cn/hls/cctv10.m3u8','','CCTV-10','普通');
+                                                    els.sc_cr_c042.load_player('http://ivi.bupt.edu.cn/hls/cctv10.m3u8','','CCTV-10','普通');
                                                   },undefined,0);
                                                 }
                                               },
@@ -1286,7 +1286,7 @@
                                                 button:'',
                                                 function(){
                                                   this.element.addEventListener('input',(event)=>{
-                                                    els.sc_cr_client042.load_player(event.target.value,'','url m3u8',event.target.value);
+                                                    els.sc_cr_c042.load_player(event.target.value,'','url m3u8',event.target.value);
                                                   });
                                                 }
                                               }
@@ -1301,7 +1301,7 @@
                                                 button:'<i class="fas fa-chevron-right"></i>',
                                                 function(){
                                                   tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                    els.sc_cr_client042.sc_bk_block_solid_account.add(els.sc_cr_client042.sc_bk_template_solid({
+                                                    els.sc_cr_c042.sc_bk_block_solid_account.add(els.sc_cr_c042.sc_bk_template_solid({
                                                       control_type:'sc_bk_control_base',
                                                       control_data:{
                                                         array:['back'],
@@ -1351,14 +1351,14 @@
                                                 button:'',
                                                 function(){
                                                   this.element.addEventListener('input',(event)=>{
-                                                    event.target.setAttribute('max',els.sc_cr_client042.offsetHeight/2);
+                                                    event.target.setAttribute('max',els.sc_cr_c042.offsetHeight/2);
                                                     if(event.target.value>parseInt(event.target.max)){
                                                       event.target.value=parseInt(event.target.max);
                                                     }
-                                                    els.sc_cr_client042.style.setProperty('border-top-width',`${event.target.value?event.target.value:0}px`);
-                                                    els.sc_cr_client042.style.setProperty('overflow','unset');
+                                                    els.sc_cr_c042.style.setProperty('border-top-width',`${event.target.value?event.target.value:0}px`);
+                                                    els.sc_cr_c042.style.setProperty('overflow','unset');
                                                     setTimeout(()=>{
-                                                      els.sc_cr_client042.style.removeProperty('overflow');
+                                                      els.sc_cr_c042.style.removeProperty('overflow');
                                                     },350*1.25);
                                                   });
                                                 }
@@ -1370,7 +1370,7 @@
                                                 description:'这个标签可能没有后退按钮.',
                                                 function(){
                                                   tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                    tyin.openTab(`${location.origin+location.pathname}?version=client042`);
+                                                    tyin.openTab(`${location.origin+location.pathname}?version=c042`);
                                                   },undefined,0);
                                                 }
                                               },
@@ -1381,7 +1381,7 @@
                                                 description:'尽量少显示外部 GUI 构成.',
                                                 function(){
                                                   tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                    tyin.openWindow(`${location.origin+location.pathname}?version=client042`);
+                                                    tyin.openWindow(`${location.origin+location.pathname}?version=c042`);
                                                   },undefined,0);
                                                 }
                                               },
@@ -1426,9 +1426,9 @@
                 ]
               }
             ]
-          },els.sc_cr_client042_cr_menu_account),els.sc_cr_client042_cr_menu_account);
-          els.sc_cr_client042.sc_bk_block_solid_search=tyin.elementBlock(els.sc_cr_client042_cr_cr_cr_search,'sc_bk_block_solid_search',undefined,350*1.25);
-          els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+          },els.sc_cr_c042_cr_menu_account),els.sc_cr_c042_cr_menu_account);
+          els.sc_cr_c042.sc_bk_block_solid_search=tyin.elementBlock(els.sc_cr_c042_cr_cr_cr_search,'sc_bk_block_solid_search',undefined,350*1.25);
+          els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
             control_type:'sc_bk_control_base',
             control_data:{
               array:[],
@@ -1445,7 +1445,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1468,7 +1468,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1491,7 +1491,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1514,7 +1514,7 @@
                     button:'<i class="fas fa-chevron-right"></i>',
                     function(){
                       tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                        els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+                        els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
                           control_type:'sc_bk_control_base',
                           control_data:{
                             array:['back'],
@@ -1561,7 +1561,7 @@
                           input.addEventListener('keydown',async(event)=>{
                             if(event.key==='Enter'){
                               if(input.value.trim()!==''){
-                                els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+                                els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
                                   control_type:'sc_bk_control_base',
                                   control_data:{
                                     array:['back'],
@@ -1577,7 +1577,7 @@
                                 },undefined,async(data)=>{
                                   tyin.elementState(data.sc_bk_view_listText,'ic_bk_progressIndicatorCircular_indeterminate_24','',true);
                                   const container=data.sc_bk_view_listText.children[0].children[0];
-                                  await tyin.fetch(`${els.client_ve_serverURL}/server100/video/source`,'GET',undefined,undefined,undefined,'json',(data)=>{
+                                  await tyin.fetch(`${els.client_ve_serverURL}/s100/video/source`,'GET',undefined,undefined,undefined,'json',(data)=>{
                                     let html='';
                                     tyin.for(data.result,(...data)=>{
                                       if(data[2].url){
@@ -1588,7 +1588,7 @@
                                     tyin.listenDOM('add',container,'pointer_up',(data)=>{
                                       const target=data.target.children[1];
                                       if(target.dataset.source_url){
-                                        els.sc_cr_client042.sc_bk_block_solid_search.add(els.sc_cr_client042.sc_bk_template_solid({
+                                        els.sc_cr_c042.sc_bk_block_solid_search.add(els.sc_cr_c042.sc_bk_template_solid({
                                           control_type:'sc_bk_control_base',
                                           control_data:{
                                             array:['back'],
@@ -1611,7 +1611,7 @@
                                           container.innerHTML=html;
                                           tyin.listenDOM('add',container,'pointer_up',(data)=>{
                                             const target=data.target.lastElementChild;
-                                            els.sc_cr_client042.load_player(target.dataset.source_url,target.dataset.source_poster,target.dataset.source_name,`第 ${target.dataset.source_count} 话`);
+                                            els.sc_cr_c042.load_player(target.dataset.source_url,target.dataset.source_poster,target.dataset.source_name,`第 ${target.dataset.source_count} 话`);
                                           });
                                           tyin.elementState(data.sc_bk_view_listText,'','ic_bk_progressIndicatorCircular_indeterminate_24',true);
                                         }));
@@ -1632,15 +1632,15 @@
                 ]
               }
             ]
-          },els.sc_cr_client042_cr_menu_search),els.sc_cr_client042_cr_menu_search);
+          },els.sc_cr_c042_cr_menu_search),els.sc_cr_c042_cr_menu_search);
         },
-        sc_cr_client042_cr:{
-          sc_cr_client042_cr_menu:{
+        sc_cr_c042_cr:{
+          sc_cr_c042_cr_menu:{
             function(){
               const set=(data,current_who)=>{
-                for(let item=0,length=els.sc_cr_client042_cr_menu.childElementCount;item<length;item++){
-                  if(els.sc_cr_client042_cr_menu.children[item]!==data&&els.sc_cr_client042_cr_menu.children[item]!==data.parentElement.parentElement){
-                    tyin.elementState(els.sc_cr_client042_cr_menu.children[item],'','sc_mk_open',true);
+                for(let item=0,length=els.sc_cr_c042_cr_menu.childElementCount;item<length;item++){
+                  if(els.sc_cr_c042_cr_menu.children[item]!==data&&els.sc_cr_c042_cr_menu.children[item]!==data.parentElement.parentElement){
+                    tyin.elementState(els.sc_cr_c042_cr_menu.children[item],'','sc_mk_open',true);
                   }
                 }
                 setTimeout(()=>{
@@ -1659,31 +1659,31 @@
                       break;
                   }
                 },0);
-                els.sc_cr_client042_cr_cr_cr.setAttribute('data-current_who',current_who);
+                els.sc_cr_c042_cr_cr_cr.setAttribute('data-current_who',current_who);
               };
-              tyin.listenDOM('add',els.sc_cr_client042_cr_menu,'pointer_up',(data)=>{
+              tyin.listenDOM('add',els.sc_cr_c042_cr_menu,'pointer_up',(data)=>{
                 switch(data.target){
-                  case els.sc_cr_client042_cr_menu_video:
+                  case els.sc_cr_c042_cr_menu_video:
                     {
                       set(data.target,'sc_bk_block_solid_video');
                     }
                     break;
-                  case els.sc_cr_client042_cr_menu_interactive:
+                  case els.sc_cr_c042_cr_menu_interactive:
                     {
                       set(data.target,'sc_bk_block_solid_interactive');
                     }
                     break;
-                  case els.sc_cr_client042_cr_menu_account:
+                  case els.sc_cr_c042_cr_menu_account:
                     {
                       set(data.target,'sc_bk_block_solid_account');
                     }
                     break;
-                  case els.sc_cr_client042_cr_menu_search:
+                  case els.sc_cr_c042_cr_menu_search:
                     {
                       set(data.target,'sc_bk_block_solid_search');
                     }
                     break;
-                  case els.sc_cr_client042_cr_menu_search_form_input:
+                  case els.sc_cr_c042_cr_menu_search_form_input:
                     {
                       set(data.target,'sc_bk_block_solid_search');
                     }
@@ -1692,77 +1692,77 @@
                     break;
                 }
               },undefined,0);
-              els.sc_cr_client042_cr_menu_search_form_input.addEventListener('pointerdown',(event)=>{
+              els.sc_cr_c042_cr_menu_search_form_input.addEventListener('pointerdown',(event)=>{
                 set(event.target,'sc_mk_search','sc_bk_block_solid_search');
               });
             },
-            sc_cr_client042_cr_menu_video:{
+            sc_cr_c042_cr_menu_video:{
               element:[,{class:'sc_mk_open'},'<i class="fas fa-layer-group"></i>'],
-              sc_cr_client042_cr_menu_video_title:{
+              sc_cr_c042_cr_menu_video_title:{
                 element:['span',,'视频']
               },
-              sc_cr_client042_cr_menu_video_number:{
+              sc_cr_c042_cr_menu_video_number:{
                 element:['span']
               }
             },
-            sc_cr_client042_cr_menu_interactive:{
+            sc_cr_c042_cr_menu_interactive:{
               element:[,,'<i class="fas fa-comments"></i>'],
-              sc_cr_client042_cr_menu_interactive_title:{
+              sc_cr_c042_cr_menu_interactive_title:{
                 element:['span',,'互动']
               },
-              sc_cr_client042_cr_menu_interactive_number:{
+              sc_cr_c042_cr_menu_interactive_number:{
                 element:['span']
               }
             },
-            sc_cr_client042_cr_menu_account:{
+            sc_cr_c042_cr_menu_account:{
               element:[,,'<i class="fas fa-user-cog"></i>'],
-              sc_cr_client042_cr_menu_account_title:{
+              sc_cr_c042_cr_menu_account_title:{
                 element:['span',,'账户']
               },
-              sc_cr_client042_cr_menu_account_number:{
+              sc_cr_c042_cr_menu_account_number:{
                 element:['span',,'9']
               }
             },
-            sc_cr_client042_cr_menu_search:{
+            sc_cr_c042_cr_menu_search:{
               element:[,,'<i class="fas fa-search"></i>'],
               function(){
-                if(!document.documentElement.classList.contains('ic_nr_platform_mobile')&&getComputedStyle(els.sc_cr_client042_cr_menu_search_form).display!=='none'){
-                  tyin.listenDOM('add',els.sc_cr_client042_cr_menu_search,'pointer_up',(data)=>{
-                    if(data.target===els.sc_cr_client042_cr_menu_search){
-                      els.sc_cr_client042_cr_menu_search_form_input.focus();
-                      els.sc_cr_client042_cr_menu_search_form_input.selectionStart=els.sc_cr_client042_cr_menu_search_form_input.selectionEnd=els.sc_cr_client042_cr_menu_search_form_input.value.length;
+                if(!document.documentElement.classList.contains('ic_nr_platform_mobile')&&getComputedStyle(els.sc_cr_c042_cr_menu_search_form).display!=='none'){
+                  tyin.listenDOM('add',els.sc_cr_c042_cr_menu_search,'pointer_up',(data)=>{
+                    if(data.target===els.sc_cr_c042_cr_menu_search){
+                      els.sc_cr_c042_cr_menu_search_form_input.focus();
+                      els.sc_cr_c042_cr_menu_search_form_input.selectionStart=els.sc_cr_c042_cr_menu_search_form_input.selectionEnd=els.sc_cr_c042_cr_menu_search_form_input.value.length;
                     }
                   },undefined,0);
                 }
               },
-              sc_cr_client042_cr_menu_search_form:{
-                sc_cr_client042_cr_menu_search_form_input:{
+              sc_cr_c042_cr_menu_search_form:{
+                sc_cr_c042_cr_menu_search_form_input:{
                   element:['input',{enterkeyhint:'search',type:'search',placeholder:'搜寻'}]
                 },
-                sc_cr_client042_cr_menu_search_form_clear:{
+                sc_cr_c042_cr_menu_search_form_clear:{
                   element:['span',,'<i class="fas fa-times-circle"></i>'],
                   function(){
-                    tyin.listenDOM('add',els.sc_cr_client042_cr_menu_search_form_clear,'pointer_up',()=>{
-                      els.sc_cr_client042_cr_menu_search_form_input.value='';
-                      els.sc_cr_client042_cr_menu_search_form_input.focus();
+                    tyin.listenDOM('add',els.sc_cr_c042_cr_menu_search_form_clear,'pointer_up',()=>{
+                      els.sc_cr_c042_cr_menu_search_form_input.value='';
+                      els.sc_cr_c042_cr_menu_search_form_input.focus();
                     },undefined,0);
                   }
                 }
               },
-              sc_cr_client042_cr_menu_search_title:{
+              sc_cr_c042_cr_menu_search_title:{
                 element:['span',,'搜寻']
               },
-              sc_cr_client042_cr_menu_search_number:{
+              sc_cr_c042_cr_menu_search_number:{
                 element:['span']
               }
             },
-            sc_cr_client042_cr_menu_font:{
+            sc_cr_c042_cr_menu_font:{
               element:[,,'<i class="fas fa-font"></i>'],
               function(){
                 tyin.listenDOM('add',this.element,'pointer_up',async()=>{
                   tyin.elementState(this.element,'sc_mk_disabled','',true);
                   tyin.elementState(this.element,'ic_bk_progressIndicatorCircular_indeterminate_24','',true);
-                  await els.client_bk_font_pingFang(els.sc_cr_client042);
+                  await els.client_bk_font_pingFang(els.sc_cr_c042);
                   tyin.elementState(this.element,'','ic_bk_progressIndicatorCircular_indeterminate_24',true);
                   tyin.removeElement(this.element);
                 },undefined,0);
@@ -1770,60 +1770,60 @@
                   tyin.removeElement(this.element);
                 }
               },
-              sc_cr_client042_cr_menu_font_title:{
+              sc_cr_c042_cr_menu_font_title:{
                 element:['span',,'苹方']
               },
-              sc_cr_client042_cr_menu_font_number:{
+              sc_cr_c042_cr_menu_font_number:{
                 element:['span']
               }
             }
           },
-          sc_cr_client042_cr_cr:{
-            sc_cr_client042_cr_cr_player:{
-              sc_cr_client042_cr_player_cr:{
-                sc_cr_client042_cr_player_cr_cover:{
+          sc_cr_c042_cr_cr:{
+            sc_cr_c042_cr_cr_player:{
+              sc_cr_c042_cr_player_cr:{
+                sc_cr_c042_cr_player_cr_cover:{
                   element:[,,'<i class="fas fa-expand-alt"></i>'],
                   function(){
-                    tyin.listenDOM('add',els.sc_cr_client042_cr_player_cr_cover,'pointer_up',()=>{
-                      tyin.elementState(els.sc_cr_client042_cr,'sc_mk_theater','');
-                      tyin.elementState(els.sc_cr_client042_cr_player_cr_cover.children[0],'fa-compress-alt','fa-expand-alt');
+                    tyin.listenDOM('add',els.sc_cr_c042_cr_player_cr_cover,'pointer_up',()=>{
+                      tyin.elementState(els.sc_cr_c042_cr,'sc_mk_theater','');
+                      tyin.elementState(els.sc_cr_c042_cr_player_cr_cover.children[0],'fa-compress-alt','fa-expand-alt');
                       setTimeout(()=>{
-                        if(els.sc_cr_client042_cr.classList.contains('sc_mk_theater')&&els.sc_cr_client042_cr_cr_video.getAttribute('src')){
-                          els.sc_cr_client042_cr_cr_video.setAttribute('controls','');
+                        if(els.sc_cr_c042_cr.classList.contains('sc_mk_theater')&&els.sc_cr_c042_cr_cr_video.getAttribute('src')){
+                          els.sc_cr_c042_cr_cr_video.setAttribute('controls','');
                         }else{
-                          els.sc_cr_client042_cr_cr_video.removeAttribute('controls');
+                          els.sc_cr_c042_cr_cr_video.removeAttribute('controls');
                         }
                       },350*1.25*2);
                     },undefined,0);
                   }
                 },
-                sc_cr_client042_cr_player_cr_sync:{
+                sc_cr_c042_cr_player_cr_sync:{
                   element:['canvas'],
                   function(){
-                    let async_context=els.sc_cr_client042_cr_player_cr_sync.getContext('2d');
-                    els.sc_cr_client042_cr_cr_video.addEventListener('play',()=>{
-                      if(els.sc_cr_client042_cr_cr_video.paused){
+                    let async_context=els.sc_cr_c042_cr_player_cr_sync.getContext('2d');
+                    els.sc_cr_c042_cr_cr_video.addEventListener('play',()=>{
+                      if(els.sc_cr_c042_cr_cr_video.paused){
                         return false;
                       }
                       draw();
                     });
                     let draw=()=>{
-                      if(!els.sc_cr_client042_cr.classList.contains('sc_mk_theater')){
-                        els.sc_cr_client042_cr_player_cr_sync.setAttribute('width',els.sc_cr_client042_cr_cr_video.clientWidth);
-                        els.sc_cr_client042_cr_player_cr_sync.setAttribute('height',els.sc_cr_client042_cr_cr_video.clientHeight);
-                        els.sc_cr_client042_cr_player_cr_sync.style.setProperty('width',`${els.sc_cr_client042_cr_cr_video.videoWidth/els.sc_cr_client042_cr_cr_video.videoHeight*54}px`);
-                        async_context.drawImage(els.sc_cr_client042_cr_cr_video,0,0,els.sc_cr_client042_cr_cr_video.clientWidth,els.sc_cr_client042_cr_cr_video.clientHeight);
+                      if(!els.sc_cr_c042_cr.classList.contains('sc_mk_theater')){
+                        els.sc_cr_c042_cr_player_cr_sync.setAttribute('width',els.sc_cr_c042_cr_cr_video.clientWidth);
+                        els.sc_cr_c042_cr_player_cr_sync.setAttribute('height',els.sc_cr_c042_cr_cr_video.clientHeight);
+                        els.sc_cr_c042_cr_player_cr_sync.style.setProperty('width',`${els.sc_cr_c042_cr_cr_video.videoWidth/els.sc_cr_c042_cr_cr_video.videoHeight*54}px`);
+                        async_context.drawImage(els.sc_cr_c042_cr_cr_video,0,0,els.sc_cr_c042_cr_cr_video.clientWidth,els.sc_cr_c042_cr_cr_video.clientHeight);
                       }
                       setTimeout(draw,1000/24);
                     };
                   }
                 }
               },
-              sc_cr_client042_cr_player_control:{
-                sc_cr_client042_cr_player_control_info:{
+              sc_cr_c042_cr_player_control:{
+                sc_cr_c042_cr_player_control_info:{
                   function(){
-                    tyin.listenDOM('add',els.sc_cr_client042_cr_player_control_info,'pointer_up',(data)=>{
-                      els.sc_cr_client042.sc_bk_block_float.add(els.sc_cr_client042.sc_bk_template_float({
+                    tyin.listenDOM('add',els.sc_cr_c042_cr_player_control_info,'pointer_up',(data)=>{
+                      els.sc_cr_c042.sc_bk_block_float.add(els.sc_cr_c042.sc_bk_template_float({
                         control_type:'sc_bk_control_base',
                         control_data:{
                           array:[],
@@ -1834,57 +1834,57 @@
                       }));
                     },undefined,0);
                   },
-                  sc_cr_client042_cr_player_control_info_title:{
-                    element:[,,'client042']
+                  sc_cr_c042_cr_player_control_info_title:{
+                    element:[,,'c042']
                   },
-                  sc_cr_client042_cr_player_control_info_description:{
+                  sc_cr_c042_cr_player_control_info_description:{
                     element:[,,'当前 "搜寻 - 直搜" 与 "视频 - 电视台" 部分可用.']
                   }
                 },
-                sc_cr_client042_cr_player_control_play:{
+                sc_cr_c042_cr_player_control_play:{
                   element:[,,'<i class="fas fa-play"></i>'],
                   function(){
                     const set_button_state=()=>{
-                      if(!els.sc_cr_client042_cr_cr_video.getAttribute('src')){
-                        tyin.elementState(els.sc_cr_client042_cr_player_control_play,'sc_mk_disabled','',true);
+                      if(!els.sc_cr_c042_cr_cr_video.getAttribute('src')){
+                        tyin.elementState(els.sc_cr_c042_cr_player_control_play,'sc_mk_disabled','',true);
                       }else{
-                        tyin.elementState(els.sc_cr_client042_cr_player_control_play,'','sc_mk_disabled',true);
+                        tyin.elementState(els.sc_cr_c042_cr_player_control_play,'','sc_mk_disabled',true);
                       }
                     };
                     set_button_state();
-                    tyin.listenDOM('add',els.sc_cr_client042_cr_cr_video,'observe_mutation',set_button_state,{attributes:true,attributeFilter:['src']});
+                    tyin.listenDOM('add',els.sc_cr_c042_cr_cr_video,'observe_mutation',set_button_state,{attributes:true,attributeFilter:['src']});
                     const set_icon=()=>{
-                      if(els.sc_cr_client042_cr_cr_video.paused){
-                        tyin.elementState(els.sc_cr_client042_cr_player_control_play.children[0],'fa-play','fa-pause',true);
+                      if(els.sc_cr_c042_cr_cr_video.paused){
+                        tyin.elementState(els.sc_cr_c042_cr_player_control_play.children[0],'fa-play','fa-pause',true);
                       }else{
-                        tyin.elementState(els.sc_cr_client042_cr_player_control_play.children[0],'fa-pause','fa-play',true);
+                        tyin.elementState(els.sc_cr_c042_cr_player_control_play.children[0],'fa-pause','fa-play',true);
                       }
                     };
                     set_icon();
-                    tyin.listenDOM('add',els.sc_cr_client042_cr_player_control_play,'pointer_up',()=>{
-                      if(els.sc_cr_client042_cr_cr_video.paused){
-                        els.sc_cr_client042_cr_cr_video.play();
+                    tyin.listenDOM('add',els.sc_cr_c042_cr_player_control_play,'pointer_up',()=>{
+                      if(els.sc_cr_c042_cr_cr_video.paused){
+                        els.sc_cr_c042_cr_cr_video.play();
                       }else{
-                        els.sc_cr_client042_cr_cr_video.pause();
+                        els.sc_cr_c042_cr_cr_video.pause();
                       }
                       set_icon();
                     },undefined,0);
-                    els.sc_cr_client042_cr_cr_video.addEventListener('play',()=>{
+                    els.sc_cr_c042_cr_cr_video.addEventListener('play',()=>{
                       set_icon();
                     });
-                    els.sc_cr_client042_cr_cr_video.addEventListener('pause',()=>{
+                    els.sc_cr_c042_cr_cr_video.addEventListener('pause',()=>{
                       set_icon();
                     });
                   }
                 },
-                sc_cr_client042_cr_player_control_next:{
+                sc_cr_c042_cr_player_control_next:{
                   element:[,{class:'sc_mk_disabled'},'<i class="fas fa-step-forward"></i>']
                 },
-                sc_cr_client042_cr_player_control_playlist:{
+                sc_cr_c042_cr_player_control_playlist:{
                   element:[,,'<i class="fas fa-list"></i>'],
                   function(){
-                    tyin.listenDOM('add',els.sc_cr_client042_cr_player_control_playlist,'pointer_up',(data)=>{
-                      els.sc_cr_client042.sc_bk_block_float.add(els.sc_cr_client042.sc_bk_template_float({
+                    tyin.listenDOM('add',els.sc_cr_c042_cr_player_control_playlist,'pointer_up',(data)=>{
+                      els.sc_cr_c042.sc_bk_block_float.add(els.sc_cr_c042.sc_bk_template_float({
                         control_type:'sc_bk_control_base',
                         control_data:{
                           array:[],
@@ -1892,21 +1892,21 @@
                         },
                         view_type:'sc_bk_view_listText',
                         view_data:[]
-                      },data.target),els.sc_cr_client042_cr_player_control_playlist);
+                      },data.target),els.sc_cr_c042_cr_player_control_playlist);
                     },undefined,0);
                   }
                 }
               }
             },
-            sc_cr_client042_cr_cr_video:{
+            sc_cr_c042_cr_cr_video:{
               element:['video',{src:'',poster:`${els.client_ve_serverURL}/content/asset/image@0.1.0/player/poster.png`,playsinline:'',preload:'metadata'}]
             },
-            sc_cr_client042_cr_cr_cr:{
+            sc_cr_c042_cr_cr_cr:{
               element:[,{'data-current_who':'sc_bk_block_solid_video'}],
-              sc_cr_client042_cr_cr_cr_video:{},
-              sc_cr_client042_cr_cr_cr_interactive:{},
-              sc_cr_client042_cr_cr_cr_account:{},
-              sc_cr_client042_cr_cr_cr_search:{}
+              sc_cr_c042_cr_cr_cr_video:{},
+              sc_cr_c042_cr_cr_cr_interactive:{},
+              sc_cr_c042_cr_cr_cr_account:{},
+              sc_cr_c042_cr_cr_cr_search:{}
             }
           }
         }

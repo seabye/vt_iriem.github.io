@@ -133,10 +133,10 @@
               element.setAttribute('data-lyin',`{
                 'startBackgroundColor_light': '#FFFFFF',
                 'startBackgroundColor_dark': '#121212',
-                'serviceWorker': '/main@0.1.0-sw.js',
+                'serviceWorker': '/content-main-main@0.1.0-sw.js',
                 'head_title': '每日电视',
-                'head_style': '//${beforeListResult[key]}/content/main/main@0.1.0/client.css',
-                'head_script': '//${beforeListResult[key]}/content/main/main@0.1.0/client.js',
+                'head_style': '//${beforeListResult[key]}/content/main/main@0.1.0/style.css',
+                'head_script': '//${beforeListResult[key]}/content/main/main@0.1.0/script.js',
                 'head_icon': '/content/asset/image@0.1.0/icon/icon.png',
                 'head_icon_apple': '/content/asset/image@0.1.0/icon/icon-apple.png',
                 'head_themeColor_light': '#F6F6F6',

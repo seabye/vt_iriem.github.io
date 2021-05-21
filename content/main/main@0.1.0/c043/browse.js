@@ -7,11 +7,11 @@
   // run
   export const run=(tyin,els)=>{
     tyin.elementCreate({
-      sc_cr_client043_cr_cr_cr_cr_browse:{
+      sc_cr_c043_cr_cr_cr_cr_browse:{
         function(){
           tyin.loop(()=>{
-            if(els.client043_ve_functionOk){
-              els.client043_bk_container(els.client043_bk_block_solid_browse,undefined,'client043_bk_block_solid',[
+            if(els.c043_ve_functionOk){
+              els.c043_bk_container(els.c043_bk_block_solid_browse,undefined,'c043_bk_block_solid',[
                 {
                   icon:'􀊚',
                   title:'视频',
@@ -39,7 +39,7 @@
           });
         }
       }
-    },els.sc_cr_client043_cr_cr_cr_cr,'beforeend',els);
+    },els.sc_cr_c043_cr_cr_cr_cr,'beforeend',els);
   };
 // #debug
 // #after

@@ -7,15 +7,15 @@
   // run
   export const run=(tyin,els)=>{
     tyin.elementCreate({
-      sc_cr_client043_cr_cr_cr_cr_search:{
+      sc_cr_c043_cr_cr_cr_cr_search:{
         function(){
           tyin.loop(()=>{
-            if(els.client043_ve_functionOk){
-              els.client043_searchGo=(search,initial)=>{
+            if(els.c043_ve_functionOk){
+              els.c043_searchGo=(search,initial)=>{
                 if(search.trim()||initial){
-                  els.client043_bk_block_solid_search.back();
+                  els.c043_bk_block_solid_search.back();
                   setTimeout(()=>{
-                    els.client043_bk_container(els.client043_bk_block_solid_search,undefined,'client043_bk_block_solid',[
+                    els.c043_bk_container(els.c043_bk_block_solid_search,undefined,'c043_bk_block_solid',[
                       {
                         icon:'􀊫',
                         title:`搜寻${search?` '${search}'`:''}`,
@@ -27,11 +27,11 @@
                               function(self_){
                                 return new Promise((resolve)=>{
                                   tyin.elementCreate({
-                                    client043_bk_view_setting_before:{},
-                                    client043_bk_view_setting_list:{
+                                    c043_bk_view_setting_before:{},
+                                    c043_bk_view_setting_list:{
                                       async function(){
                                         if(!initial){
-                                          await tyin.fetch(`${els.client_ve_serverURL}/server100/video/source`,'GET',undefined,undefined,undefined,'json',(data)=>{
+                                          await tyin.fetch(`${els.client_ve_serverURL}/s100/video/source`,'GET',undefined,undefined,undefined,'json',(data)=>{
                                             let html='';
                                             tyin.for(data.result,(...data)=>{
                                               if(data[2].url){
@@ -41,8 +41,8 @@
                                             this.element.insertAdjacentHTML('beforeend',html);
                                             tyin.listenDOM('add',this.element,'pointer_up',(data)=>{
                                               if(data.target.dataset.source_url){
-                                                if(els.client043_bk_block_liquid.get('playlist')){}
-                                                els.client043_bk_container(els.client043_bk_block_liquid,'playlist','client043_bk_block_liquid',[
+                                                if(els.c043_bk_block_liquid.get('playlist')){}
+                                                els.c043_bk_container(els.c043_bk_block_liquid,'playlist','c043_bk_block_liquid',[
                                                   {
                                                     icon:'􀊚',
                                                     title:'视频',
@@ -57,8 +57,8 @@
                                                           function(self_){
                                                             return new Promise((resolve)=>{
                                                               tyin.elementCreate({
-                                                                client043_bk_view_setting_before:{},
-                                                                client043_bk_view_setting_list:{
+                                                                c043_bk_view_setting_before:{},
+                                                                c043_bk_view_setting_list:{
                                                                   function(){
                                                                     let html='';
                                                                     tyin.for(data.target.dataset.source_url.split(','),(...data_)=>{
@@ -67,12 +67,12 @@
                                                                     this.element.insertAdjacentHTML('beforeend',html);
                                                                     tyin.listenDOM('add',this.element,'pointer_up',(data)=>{
                                                                       if(data.target.dataset.source_url){
-                                                                        els.client043_bk_player(data.target.dataset.source_url,data.target.dataset.source_poster,`${data.target.dataset.source_name} - 第 ${data.target.dataset.source_count} 话`,'...');
+                                                                        els.c043_bk_player(data.target.dataset.source_url,data.target.dataset.source_poster,`${data.target.dataset.source_name} - 第 ${data.target.dataset.source_count} 话`,'...');
                                                                       }
                                                                     });
                                                                   }
                                                                 },
-                                                                client043_bk_view_setting_after:{}
+                                                                c043_bk_view_setting_after:{}
                                                               },this.element);
                                                               resolve();
                                                             });
@@ -98,7 +98,7 @@
                                         }
                                       }
                                     },
-                                    client043_bk_view_setting_after:{}
+                                    c043_bk_view_setting_after:{}
                                   },this.element);
                                   setTimeout(()=>{
                                     resolve();
@@ -141,43 +141,43 @@
                       }
                     ],function(self_){
                       tyin.elementCreate({
-                        client043_bk_container_head:{
-                          client043_bk_container_head_search:{
-                            client043_bk_container_head_search_input:{
+                        c043_bk_container_head:{
+                          c043_bk_container_head_search:{
+                            c043_bk_container_head_search_input:{
                               element:['input',{enterkeyhint:'search',type:'search',placeholder:'搜寻'}],
                               function(){
-                                this.element.value=els.sc_cr_client043_cr_cr_menu_search_cr_search_input_self.value;
-                                els.sc_cr_client043_cr_cr_menu_search_cr_search_input_self_copy=this.element;
+                                this.element.value=els.sc_cr_c043_cr_cr_menu_search_cr_search_input_self.value;
+                                els.sc_cr_c043_cr_cr_menu_search_cr_search_input_self_copy=this.element;
                                 this.element.addEventListener('input',(event)=>{
-                                  els.sc_cr_client043_cr_cr_menu_search_cr_search_input_self.value=event.target.value;
+                                  els.sc_cr_c043_cr_cr_menu_search_cr_search_input_self.value=event.target.value;
                                   if(event.target.value){
-                                    tyin.elementState(els.sc_cr_client043_cr_cr_menu_search_cr_search_clear,'','client043_sc_mk_hide',true);
+                                    tyin.elementState(els.sc_cr_c043_cr_cr_menu_search_cr_search_clear,'','c043_sc_mk_hide',true);
                                   }else{
-                                    tyin.elementState(els.sc_cr_client043_cr_cr_menu_search_cr_search_clear,'client043_sc_mk_hide','',true);
+                                    tyin.elementState(els.sc_cr_c043_cr_cr_menu_search_cr_search_clear,'c043_sc_mk_hide','',true);
                                   }
                                 });
                                 this.element.addEventListener('keydown',(event)=>{
                                   if(event.key==='Enter'&&event.target.localName==='input'){
-                                    els.client043_searchGo(event.target.value);
+                                    els.c043_searchGo(event.target.value);
                                   }
                                 });
                               }
                             }
                           }
                         }
-                      },self_.client043_bk_container,'afterbegin');
+                      },self_.c043_bk_container,'afterbegin');
                     });
                   },350);
                 }
               };
-              els.client043_searchGo('',true);
+              els.c043_searchGo('',true);
               return true;
             }
             return false;
           });
         }
       }
-    },els.sc_cr_client043_cr_cr_cr_cr,'beforeend',els);
+    },els.sc_cr_c043_cr_cr_cr_cr,'beforeend',els);
   };
 // #debug
 // #after

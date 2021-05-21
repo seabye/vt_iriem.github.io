@@ -7,11 +7,11 @@
   // run
   export const run=(tyin,els)=>{
     tyin.elementCreate({
-      sc_cr_client043_cr_cr_cr_cr_account:{
+      sc_cr_c043_cr_cr_cr_cr_account:{
         function(){
           tyin.loop(()=>{
-            if(els.client043_ve_functionOk){
-              els.client043_bk_container(els.client043_bk_block_solid_account,undefined,'client043_bk_block_solid',[
+            if(els.c043_ve_functionOk){
+              els.c043_bk_container(els.c043_bk_block_solid_account,undefined,'c043_bk_block_solid',[
                 {
                   icon:'􀋚',
                   title:'通知',
@@ -66,13 +66,13 @@
                         function(self_){
                           return new Promise((resolve)=>{
                             tyin.elementCreate({
-                              client043_bk_view_setting_before:{},
-                              client043_bk_view_setting_list:[
+                              c043_bk_view_setting_before:{},
+                              c043_bk_view_setting_list:[
                                 {
                                   element:[,,'􀥏 工坊'],
                                   function(){
                                     tyin.listenDOM('add',this.element,'pointer_up',(data)=>{
-                                      els.client043_bk_container(els.client043_bk_block_solid_account,data.target,'client043_bk_block_solid',[
+                                      els.c043_bk_container(els.c043_bk_block_solid_account,data.target,'c043_bk_block_solid',[
                                         {
                                           title:'工坊',
                                           control:{
@@ -86,13 +86,13 @@
                                                 function(self_){
                                                   return new Promise((resolve)=>{
                                                     tyin.elementCreate({
-                                                      client043_bk_view_setting_before:{},
-                                                      client043_bk_view_setting_list:[
+                                                      c043_bk_view_setting_before:{},
+                                                      c043_bk_view_setting_list:[
                                                         {
                                                           element:[,,'􀥏 调试'],
                                                           function(){
                                                             tyin.listenDOM('add',this.element,'pointer_up',(data)=>{
-                                                              els.client043_bk_container(els.client043_bk_block_solid_account,data.target,'client043_bk_block_solid',[
+                                                              els.c043_bk_container(els.c043_bk_block_solid_account,data.target,'c043_bk_block_solid',[
                                                                 {
                                                                   icon:'􀥏',
                                                                   title:function 调试(){
@@ -107,7 +107,7 @@
                                                                     },
                                                                     filter(self_){
                                                                       console.log('++++',this.element);
-                                                                      els.client043_bk_container(els.client043_bk_block_liquid,undefined,'client043_bk_block_liquid',[
+                                                                      els.c043_bk_container(els.c043_bk_block_liquid,undefined,'c043_bk_block_liquid',[
                                                                         {
                                                                           title:'filter',
                                                                           control:{
@@ -127,7 +127,7 @@
                                                                     },
                                                                     more(self_){
                                                                       console.log('++++',this.element);
-                                                                      els.client043_bk_container(els.client043_bk_block_liquid,undefined,'client043_bk_block_liquid',[
+                                                                      els.c043_bk_container(els.c043_bk_block_liquid,undefined,'c043_bk_block_liquid',[
                                                                         {
                                                                           title:'more',
                                                                           control:{
@@ -151,13 +151,13 @@
                                                                         function(self_){
                                                                           return new Promise((resolve)=>{
                                                                             tyin.elementCreate({
-                                                                              client043_bk_view_setting_before:{},
-                                                                              client043_bk_view_setting_list:[
+                                                                              c043_bk_view_setting_before:{},
+                                                                              c043_bk_view_setting_list:[
                                                                                 [
                                                                                   function(){
                                                                                     tyin.elementCreate(undefined,undefined,this.element,undefined,'􀊚 视频');
                                                                                     tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                                                      els.client043_bk_player('https://wanmei.xiaocong-zuida.com/20171218/kADRk4MM/index.m3u8','https://tupian.gg-zui.com/pic/upload/vod/2017-12-18/201712181513564121.jpg','死亡笔记 - 第 1 话','荒木哲郎');
+                                                                                      els.c043_bk_player('https://wanmei.xiaocong-zuida.com/20171218/kADRk4MM/index.m3u8','https://tupian.gg-zui.com/pic/upload/vod/2017-12-18/201712181513564121.jpg','死亡笔记 - 第 1 话','荒木哲郎');
                                                                                     },undefined,0);
                                                                                   }
                                                                                 ],
@@ -165,7 +165,7 @@
                                                                                   function(){
                                                                                     tyin.elementCreate(undefined,undefined,this.element,undefined,'􀑪 声频');
                                                                                     tyin.listenDOM('add',this.element,'pointer_up',()=>{
-                                                                                      els.client043_bk_player('','http://p1.music.126.net/R3S3vxO10FPC0KY4GKYwOA==/6026423232258464.jpg','素敌だね','りっき');
+                                                                                      els.c043_bk_player('','http://p1.music.126.net/R3S3vxO10FPC0KY4GKYwOA==/6026423232258464.jpg','素敌だね','りっき');
                                                                                     },undefined,0);
                                                                                   }
                                                                                 ],
@@ -175,7 +175,7 @@
                                                                                   }
                                                                                 ]
                                                                               ],
-                                                                              client043_bk_view_setting_after:{}
+                                                                              c043_bk_view_setting_after:{}
                                                                             },this.element);
                                                                             resolve();
                                                                           });
@@ -202,7 +202,7 @@
                                                           }
                                                         }
                                                       ],
-                                                      client043_bk_view_setting_after:{}
+                                                      c043_bk_view_setting_after:{}
                                                     },this.element);
                                                     resolve();
                                                   });
@@ -216,7 +216,7 @@
                                   }
                                 }
                               ],
-                              client043_bk_view_setting_after:{}
+                              c043_bk_view_setting_after:{}
                             },this.element);
                             resolve();
                           });
@@ -232,7 +232,7 @@
           });
         }
       }
-    },els.sc_cr_client043_cr_cr_cr_cr,'beforeend',els);
+    },els.sc_cr_c043_cr_cr_cr_cr,'beforeend',els);
   };
 // #debug
 // #after

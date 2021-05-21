@@ -30,7 +30,7 @@
   // build
   let ready=false;
   if(location.pathname!=='/'){
-    tyin.fetch(`${els.client_ve_serverURL}/server100${tyin.URLPath()}`,'GET',undefined,undefined,undefined,'json',(data)=>{
+    tyin.fetch(`${els.client_ve_serverURL}/s100${tyin.URLPath()}`,'GET',undefined,undefined,undefined,'json',(data)=>{
       els.client_ve_page=data;
       if(data.status!==200){
         els.client_ve_page.result={title:'404 Not Found',data:'404 Not Found'};
@@ -49,7 +49,7 @@
           els.client_ve_startVersion=tyin.URLObject().search.version;
         }
       }else{
-        els.client_ve_startVersion='client043';
+        els.client_ve_startVersion='c043';
       }
       tyin.loop(()=>{
         if(document.styleSheets){
