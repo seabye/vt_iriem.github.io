@@ -133,7 +133,7 @@
               element.setAttribute('data-lyin',`{
                 'startBackgroundColor_light': '#FFFFFF',
                 'startBackgroundColor_dark': '#121212',
-                'serviceWorker': '/content-main-main@0.1.0-sw.js',
+                'serviceWorker': '/sw.js',
                 'head_title': '每日电视',
                 'head_style': '//${beforeListResult[key]}/content/main/main@0.1.0/style.css',
                 'head_script': '//${beforeListResult[key]}/content/main/main@0.1.0/script.js',
