@@ -2,7 +2,7 @@
 // #before
 // #import
 // #variable
-// #method
+// #block
 // #build
   // build
   {

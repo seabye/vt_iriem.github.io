@@ -55,7 +55,7 @@
         if(document.styleSheets){
           let mark=false;
           tyin.for([...document.styleSheets],(...data)=>{
-            if(data[2].href&&data[2].href.match(/style\.css/i)){
+            if(data[2].href&&data[2].href.match('style.css')){
               els.client_ve_clientStyle=document.styleSheets[data[1]];
               els.client_ve_clientStyle.insertRule(`@import "./${els.client_ve_startVersion}/style.css"`,1);
               mark=true;

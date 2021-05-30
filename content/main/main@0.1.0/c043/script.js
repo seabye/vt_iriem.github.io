@@ -251,7 +251,7 @@
               const elementState=[];
               let elementState_default=true;
               tyin.for(els_,(...item)=>{
-                if(item[1].match(/c043_bk_container_tab_item/i)){
+                if(item[1].match('c043_bk_container_tab_item')){
                   elementState.push([
                     elementState_default,
                     [

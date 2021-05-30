@@ -9,7 +9,7 @@
     tyin.elementCreate({
       sc_cr_c042:{
         function(){
-          tyin.loadPackage_fontAwesomeFree();
+          tyin.loadGlobalPackage_fontAwesomeFree();
           tyin.runObject({
             orientation(){
               const run=()=>{
@@ -1314,7 +1314,7 @@
                                                           content:[
                                                             {
                                                               icon:'',
-                                                              content:navigator.languages.toString().replace(/,/g,',\n'),
+                                                              content:navigator.languages.toString().replace(/\,/g,',\n'),
                                                               button:''
                                                             }
                                                           ]
